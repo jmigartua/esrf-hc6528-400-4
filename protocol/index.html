@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Protocol · ESRF hc6528 · 400_4 – ESRF hc6528 · 400_4 · in-situ powder diffraction</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html-afe927e19676d0e50b1726048be49fb1.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- The site is for the team while the measurements are unpublished (L015): anyone with the link reads it, search engines do not list it. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<!-- KaTeX auto-render: publication titles carry TeX inside generated HTML that
+     Quarto's own math pipeline never sees (same approach as thermomat). -->
+<script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script>
+/* The header ribbon is sticky; the side columns and anchor targets need its height. */
+(function () {
+  function headH() {
+    var t = document.querySelector(".topline"), h = document.querySelector(".site-head");
+    var px = (t ? t.offsetHeight : 0) + (h ? h.offsetHeight : 0);
+    if (px) document.documentElement.style.setProperty("--head-h", px + "px");
+  }
+  document.addEventListener("DOMContentLoaded", headH);
+  window.addEventListener("load", headH);
+  window.addEventListener("resize", headH);
+})();
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }, { left: "\\(", right: "\\)", display: false }],
+      throwOnError: false
+    });
+  }
+  /* Quarto's KaTeX pipeline writes <span class="math inline">TeX</span> without delimiters and renders
+     them in a loop that reads firstChild.data; that loop dies at the first span the auto-render above
+     has already turned into KaTeX markup, leaving every later formula raw. Render the rest here. */
+  if (window.katex) {
+    document.querySelectorAll(".math").forEach(function (el) {
+      if (!el.querySelector(".katex")) {
+        var t = el.textContent.replace(/^\s*\\[\(\[]/, "").replace(/\\[\)\]]\s*$/, "");
+        try { katex.render(t, el, { displayMode: el.classList.contains("display"), throwOnError: false }); } catch (e) {}
+      }
+      /* Quarto's loop would still visit this span and wipe it (firstChild is now an element, not text):
+         take it out of its sight. No stylesheet of the site depends on the class; KaTeX's own output carries the layout. */
+      el.classList.remove("math"); el.classList.add("math-done");
+    });
+  }
+});
+</script>
+
+
+<link rel="stylesheet" href="../assets/styles/theme.css">
+<link rel="stylesheet" href="../assets/styles/site.css">
+<link rel="stylesheet" href="../assets/styles/project.css">
+</head>
+
+<body>
+
+<!-- Site header, family kit. Root-absolute hrefs are rewritten by Quarto to page-relative links at render time. -->
+<div class="topline"></div>
+<header class="site-head">
+  <div class="site-head__inner">
+    <a href="../index.html" class="wordmark">ESRF hc6528 <span class="accent">· 400_4</span>
+      <span class="wordmark-sub">Irene's in-situ powder diffraction, 900 → 1300 °C · the files, the extraction, the analysis to come · thermomat, Fisika Saila, EHU · from 23 October 2026</span>
+    </a>
+    <!-- The entries are the groups of data/nav.yml, in the same order; the two navigations say the same thing. -->
+    <nav class="site-nav">
+      <a href="../index.html">Overview</a>
+      <a href="../brief/index.html">Brief</a>
+      <a href="../protocol/index.html">Protocol</a>
+      <a href="../data/index.html">Data</a>
+      <a href="../timeline/index.html">Timeline</a>
+      <a href="../figures/index.html">Figures</a>
+      <a href="../findings/index.html">Findings</a>
+      <a href="../ideas/index.html">Ideas</a>
+      <a href="../questions/index.html">Questions</a>
+      <a href="../decisions/index.html">Decisions</a>
+      <a href="../roadmap/index.html">Roadmap</a>
+      <span class="nav-right">
+        <span class="nav-pair"><a href="../about/index.html">Method</a><span class="sl">/</span><a href="../log/index.html">Log</a><span class="sl">/</span><a href="../benchmark/index.html">Benchmark</a></span>
+      </span>
+    </nav>
+  </div>
+</header>
+<!-- generated by tools/build.py: left navigation + opening of the reading column -->
+<div class="docs">
+<nav class="docs-nav" aria-label="Site sections">
+<button class="docs-fold" type="button" data-fold="nav" aria-label="Hide the navigation" title="Hide the navigation">‹</button>
+<details class="group" open=""><summary class="t">Overview</summary><ul><li><a href="../index.html">Overview</a></li></ul></details>
+<details class="group" open=""><summary class="t">Brief</summary><ul><li><a href="../brief/index.html">Josu's messages, verbatim</a></li></ul></details>
+<details class="group" open=""><summary class="t">Protocol</summary><ul><li><a href="../protocol/index.html">The extraction, step by step</a></li><li><a href="../protocol/index.html#changed">What was changed, and what was not</a></li><li><a href="../protocol/index.html#repeat">How to repeat it</a></li></ul></details>
+<details class="group" open=""><summary class="t">Data</summary><ul><li><a href="../data/index.html">The 101 files</a></li><li><a href="../data/index.html#format">File format</a></li><li><a href="../data/index.html#naming">The naming scheme</a></li><li><a href="../data/index.html#table">The table, one row per scan</a></li></ul></details>
+<details class="group" open=""><summary class="t">Timeline</summary><ul><li><a href="../timeline/index.html">The experiment's stages</a></li></ul></details>
+<details class="group" open=""><summary class="t">Figures</summary><ul><li><a href="../figures/index.html">How the diffractograms evolve</a></li><li><a href="../figures/index.html#g-ramp">The 19 long scans against T</a></li><li><a href="../figures/index.html#g-all">All 100 scans against time</a></li><li><a href="../figures/index.html#g-hold">The 1270 °C hold</a></li><li><a href="../figures/index.html#g-map-temp">Maps: temperature–2θ plane</a></li><li><a href="../figures/index.html#g-map-time">Maps: time–2θ, all scans</a></li><li><a href="../figures/index.html#g-map-hold">Maps: the hold</a></li><li><a href="../figures/index.html#made">How they are made</a></li></ul></details>
+<details class="group" open=""><summary class="t">Findings</summary><ul><li><a href="../findings/index.html">What the files show</a></li></ul></details>
+<details class="group" open=""><summary class="t">Ideas</summary><ul><li><a href="../ideas/index.html">What to do with the data</a></li></ul></details>
+<details class="group" open=""><summary class="t">Questions</summary><ul><li><a href="../questions/index.html">For Irene and the group</a></li></ul></details>
+<details class="group" open=""><summary class="t">Decisions</summary><ul><li><a href="../decisions/index.html">Open and answered</a></li></ul></details>
+<details class="group" open=""><summary class="t">Roadmap</summary><ul><li><a href="../roadmap/index.html">Phases</a></li></ul></details>
+<details class="group" open=""><summary class="t">Method / Log</summary><ul><li><a href="../about/index.html">How this site works</a></li><li><a href="../log/index.html">The log, every dated step</a></li><li><a href="../benchmark/index.html">Benchmark: every task timed</a></li></ul></details>
+</nav>
+<div class="docs-main">
+
+<header id="title-block-header">
+<h1 class="title">Protocol</h1>
+
+</header>
+
+
+<div class="page-article">
+<h1>The extraction, step by step</h1>
+<p class="lede">The report to the group: every step taken on 23 October 2026 to turn the folder as received into a named, verified, described dataset, in the order taken, with the command run and the evidence it returned. Ids P01–P14 never change. The numbers quoted are those of <code>data/scans.json</code>, recomputed from the originals by <code>tools/analyze.py</code> on every build.</p>
+
+<div class="facts">
+<div class="k">Input</div><div><code>edited-files-hc6528_400_4 2/</code>: 101 <code>.xye</code> files, 112 MB, mode 000; a zip beside it, excluded</div>
+<div class="k">Output</div><div><code>originals/</code> (the same files, readable), <code>renamed/</code> (101 byte-identical copies, new names), <code>file_index.csv</code>, <code>README.md</code>, this site</div>
+<div class="k">Changed</div><div>The file mode of the originals, 000 → 644. Nothing else: see <a href="#changed">below</a></div>
+<div class="k">Verified</div><div>SHA-256 of every original = its copy = the index, twice on the day and on every build since</div>
+<div class="k">Not done</div><div>No plot, no background subtraction, no fit: phase 1 onward, on Josu's word</div>
+</div>
+<article class="step" id="P01"><div class="step-head"><span class="pid">P01</span><span class="phase-tag">survey</span></div><h3 class="anchored">The project folder as received</h3><p>The folder <code>20261023_esrf_datuak_irene</code> held three things: the archive <code>edited-files-hc6528_400_4.zip</code> (34.1 MB), the folder it had been extracted to, <code>edited-files-hc6528_400_4 2/</code>, and a Finder <code>.DS_Store</code>. Josu's brief: study the extracted folder in depth, leave the zip alone, keep the files as they are, rename the folder to <code>originals</code>, and make a properly named copy of every file in a new folder.</p><pre class="cmd">ls -la
+ls "edited-files-hc6528_400_4 2" | wc -l
+du -sh "edited-files-hc6528_400_4 2"</pre><div class="evidence"><span class="lbl">Evidence</span><p>101 files, 112 MB, every one with the extension <code>.xye</code>. The zip was not opened, listed or compared; it is excluded from everything that follows.</p></div><div class="src"><a href="../brief/index.html#B01">B01</a></div></article>
+<article class="step" id="P02"><div class="step-head"><span class="pid">P02</span><span class="phase-tag">survey</span></div><h3 class="anchored">The files could not be read: mode 000 from the extraction</h3><p>The first attempt to read a file was refused with <em>Permission denied</em>. The folder was <code>drwx---rwx</code> with a <code>com.apple.quarantine</code> attribute, and every file inside was <code>----------</code> (mode 000): the archive had been extracted without read permission for anyone, owner included. The owner is the local user, so the mode could be changed. This is the only change made to the originals: names, contents, sizes and modification times are untouched (P13 proves it with checksums).</p><pre class="cmd">whoami; id
+ls -la@ | head
+chmod 644 *.xye</pre><div class="evidence"><span class="lbl">Evidence</span><p>Before: <code>---------- 1 kevin staff 1160656 Jun 10 19:03 hc6528_400_4_Qu_1000C_w0003_b0001-3242s.xye</code> (and so on for all 101). After <code>chmod 644</code>, every file readable. The folder's own mode and quarantine flag were left as found.</p></div></article>
+<article class="step" id="P03"><div class="step-head"><span class="pid">P03</span><span class="phase-tag">read</span></div><h3 class="anchored">What a file contains: three columns, no header</h3><p>The head and tail of the first scan (<code>…900C…-0s.xye</code>) were printed. Every line is three numbers: 2θ in degrees, an intensity and an estimated standard deviation (esd). There is no header, no comment line and no metadata of any kind inside the files. The first lines, below about 0.02°, have zero intensity with a large esd: the beamstop's shadow. The 2θ axis runs from 0.008° to 26.999°.</p><pre class="cmd">head -25 hc6528_400_4_Qu_900C_w0003_b0001-0s.xye
+tail -3  hc6528_400_4_Qu_900C_w0003_b0001-0s.xye</pre><div class="evidence"><span class="lbl">Evidence</span><pre>    0.008000  0.0000000      1567.0943
+    0.009000  0.0000000      100.84378
+    …
+    0.023000  1690.1763      412.41486
+    …
+   26.999000  82.555925      3.5181567
+So the "contents" from which the copies were to be named are the numbers alone; all the metadata is in the
+filenames and in the file system (P06).</pre></div></article>
+<article class="step" id="P04"><div class="step-head"><span class="pid">P04</span><span class="phase-tag">read</span></div><h3 class="anchored">Two sizes, two line counts</h3><p>The sizes and line counts of all 101 files fall into exactly two groups.</p><pre class="cmd">ls -l *.xye | awk '{print $5}' | sort | uniq -c
+wc -l *.xye | awk '{print $1}' | sort | uniq -c</pre><div class="evidence"><span class="lbl">Evidence</span><ul><li>20 files of 1 160 656 bytes and 26 992 lines.</li><li>81 files of 1 160 613 bytes and 26 991 lines. The 43-byte difference is exactly one line: the 20 larger files start at 0.008°, the 81 smaller ones at 0.009° (P07 confirms it file by file).</li></ul></div></article>
+<article class="step" id="P05"><div class="step-head"><span class="pid">P05</span><span class="phase-tag">read</span></div><h3 class="anchored">The filename pattern decoded</h3><p>Every name matches <code>hc6528_400_4_Qu_&lt;tag&gt;_w0003_b0001-&lt;N&gt;s.xye</code>. Read as: <code>hc6528</code> the ESRF proposal number (HC-6528), <code>400_4</code> the sample, <code>Qu</code> a sample label (its meaning is Q02), <code>&lt;tag&gt;</code> a nominal temperature written either as <code>900C</code> … <code>1300C</code> (with a C) or as <code>1225</code> … <code>1300</code> (bare), or <code>background_nosample</code>; <code>w0003</code> a parameter of the data reduction not identified from the files alone (Q04); <code>b0001</code> a bin width of 0.001°, which the data's step confirms; <code>&lt;N&gt;s</code> seconds elapsed since the first scan. The tags are not unique: 39 files share the tag <code>1270</code>, 14 the tag <code>1300</code>; only the elapsed seconds tell them apart.</p><div class="evidence"><span class="lbl">Evidence</span><p>A regular expression over the 101 names matched all of them. Tags found: 900C, 925C, 950C, 975C, 1000C, 1025C, 1050C, 1075C, 1100C, 1125C, 1150C, 1175C, 1200C, 1225C, 1225, 1240, 1245, 1250, 1266, 1270, 1272, 1275, 1280, 1290C, 1290, 1299, 1300, 1300C, background_nosample.</p></div></article>
+<article class="step" id="P06"><div class="step-head"><span class="pid">P06</span><span class="phase-tag">characterise</span></div><h3 class="anchored">Per-file statistics, sorted by elapsed time</h3><p>A Python pass over every file computed: number of points, first and last 2θ, lines that did not parse, the integrated intensity, the maximum intensity, and the file's modification time. The table was sorted by the elapsed seconds in the name, which put the experiment in order: a 25 °C-step ramp from 900 °C, then dense series at 1240–1300 °C, then the background.</p><pre class="cmd">python3 - &lt;&lt;'EOF'
+# for every *.xye: parse the three columns, read the elapsed seconds from the name, read the mtime,
+# print sec, tag, n, x0, x1, bad lines, sum(I), max(I), mtime; sort by sec
+EOF</pre><div class="evidence"><span class="lbl">Evidence</span><ul><li>No line failed to parse in any file.</li><li>Every file ends at 26.999°; 20 start at 0.008°, 81 at 0.009°.</li><li>The integrated intensity is nearly constant, 4.49–4.66 million counts for the sample scans and 4.16 million for the background: the patterns are on a common scale already (F03).</li><li>The maximum intensity of the whole pattern is always in the first 0.03° (the direct beam's tail), so it says nothing about the sample; the statistics were redone above 1° (P08).</li></ul></div></article>
+<article class="step" id="P07"><div class="step-head"><span class="pid">P07</span><span class="phase-tag">characterise</span></div><h3 class="anchored">The modification times are the scan times</h3><p>The modification time of every file minus its elapsed seconds gives the same instant, 2026-06-10 18:09:48, for all 101 files. So the clock time of every scan is recoverable, and the two sources of time (name and file system) agree exactly. The experiment ran from 18:09 on 10 June 2026 to 04:46 on 11 June, 10.6 hours.</p><div class="evidence"><span class="lbl">Evidence</span><p><code>mtime − sec − T0</code> took a single value, 0 s, over the 101 files. Copies were therefore made with <code>shutil.copy2</code>, which preserves modification times (P12).</p></div></article>
+<article class="step" id="P08"><div class="step-head"><span class="pid">P08</span><span class="phase-tag">characterise</span></div><h3 class="anchored">Grid, counting statistics and a crude peak count</h3><p>A second pass checked the 2θ step of every file (min and max of the differences), computed the median relative error e/y above 2° as a proxy for counting time, and counted peaks: local maxima more than 6 esd above a 301-point rolling median, at 2θ above 1°. The peak count is a consistency check between scans, not a peak search.</p><pre class="cmd"># tools/analyze.py reproduces this pass and writes data/scans.json
+cd ecosystem &amp;&amp; python3 tools/analyze.py</pre><div class="evidence"><span class="lbl">Evidence</span><ul><li>The step is 0.001° in every file: min = max = 0.0010.</li><li>Median e/y: 0.0396–0.0414 for the 26 992-point files, 0.0463–0.0490 for the 26 991-point ones, and 0.0661 for one file alone (the bare <code>1290</code> at 31 630 s, scan 085). Two exposure classes, plus one outlier (F02, F05).</li><li>Peaks above 1°: 2 at 900 °C, 13 at 975 °C, about 50 from 1000 to 1250 °C, 54 → 138 through the 1270 °C hold, up to 322 in the last long scan at 1300 °C, 0 in the background (F04).</li></ul></div><div class="src"><a href="../findings/index.html">Findings</a> · data/scans.json</div></article>
+<article class="step" id="P09"><div class="step-head"><span class="pid">P09</span><span class="phase-tag">decide</span></div><h3 class="anchored">The naming scheme for the copies</h3><p>Since the files carry no metadata inside, the new names were built from what was recovered: the order, the temperature, the elapsed time, and the one property the contents themselves give, the exposure class. Decided: <code>hc6528_400_4_Qu_&lt;seq&gt;_T&lt;temp&gt;C_t&lt;elapsed&gt;s_&lt;class&gt;.xye</code>, with <code>seq</code> 001–101 zero-padded so that alphabetical order is acquisition order, the temperature zero-padded to four digits (the originals mixed <code>900C</code> and <code>1270</code>), the elapsed seconds zero-padded to five digits, and <code>class</code> either <code>long</code> or <code>short</code>. The background is <code>hc6528_400_4_Qu_101_background_nosample_t38192s_long.xye</code>. The <code>C</code> suffix of the originals is not in the name but is recorded in the index (D3 asks what it meant).</p><div class="evidence"><span class="lbl">Evidence</span><p>Example: <code>hc6528_400_4_Qu_900C_w0003_b0001-0s.xye</code> → <code>hc6528_400_4_Qu_001_T0900C_t00000s_long.xye</code>; <code>hc6528_400_4_Qu_1270_w0003_b0001-16530s.xye</code> → <code>hc6528_400_4_Qu_032_T1270C_t16530s_short.xye</code>. Set aside: keeping the <code>C</code> suffix in the name (it duplicates the temperature and its meaning is unconfirmed); the clock time in the name (long; it is in the index and on the Data page); the fields <code>w0003_b0001</code> (constant over the set).</p></div><div class="src"><a href="../decisions/index.html#D3">D3</a> · <a href="../data/index.html#naming">Data: naming</a></div></article>
+<article class="step" id="P10"><div class="step-head"><span class="pid">P10</span><span class="phase-tag">execute</span></div><h3 class="anchored">The folder renamed to originals</h3><pre class="cmd">mv "edited-files-hc6528_400_4 2" originals</pre><div class="evidence"><span class="lbl">Evidence</span><p><code>originals/</code> with the 101 files, names and contents as received, mode 644 (P02).</p></div></article>
+<article class="step" id="P11"><div class="step-head"><span class="pid">P11</span><span class="phase-tag">execute</span></div><h3 class="anchored">The new folder renamed/, one copy per original</h3><p>A Python script read the mapping (P09), copied each file with <code>shutil.copy2</code> into <code>renamed/</code> under its new name, and computed the SHA-256 of source and copy before moving to the next file, stopping on the first mismatch. None occurred.</p><pre class="cmd">mkdir renamed
+python3 - &lt;&lt;'EOF'
+# for each original: new name from (seq, temp, sec, class); shutil.copy2; assert sha256(src) == sha256(dst)
+# write file_index.csv with both names, metadata, statistics and the hash
+EOF</pre><div class="evidence"><span class="lbl">Evidence</span><p>101 copies, 112 MB in each folder, 101 assertions passed.</p></div></article>
+<article class="step" id="P12"><div class="step-head"><span class="pid">P12</span><span class="phase-tag">document</span></div><h3 class="anchored">The index and the README</h3><p><code>file_index.csv</code> at the project root maps every original to its copy, with the nominal temperature, the original tag and whether it had the C suffix, the elapsed seconds, the clock start time, the point count, the 2θ range, the exposure class, the median relative error, the maximum intensity above 1° and the SHA-256. <code>README.md</code> describes the layout, the format, the naming scheme, the experiment's stages, what the data show and the caveats.</p><div class="evidence"><span class="lbl">Evidence</span><p><code>file_index.csv</code>: 101 rows, 15 columns. <code>README.md</code>: six sections.</p></div><div class="src">../file_index.csv · ../README.md</div></article>
+<article class="step" id="P13"><div class="step-head"><span class="pid">P13</span><span class="phase-tag">verify</span></div><h3 class="anchored">Independent re-verification of all 101 pairs</h3><p>A separate script re-read <code>file_index.csv</code>, recomputed the SHA-256 of every original and every copy, and compared both with the hash in the index.</p><pre class="cmd">python3 - &lt;&lt;'EOF'
+# for each row: sha256(originals/orig) == sha256(renamed/new) == row.sha256
+EOF</pre><div class="evidence"><span class="lbl">Evidence</span><p><code>pairs checked: 101  mismatches: 0</code>. The same check runs inside <code>tools/analyze.py</code> on every build of this site.</p></div></article>
+<article class="step" id="P14"><div class="step-head"><span class="pid">P14</span><span class="phase-tag">document</span></div><h3 class="anchored">This site, and the log of every step</h3><p>Josu asked for the steps to be logged for the group, and for the project's website in the family's form (B02, B03). The site is <code>ecosystem/</code>: data files, a generator and a Quarto project with the family design kit, as thermomat-phd-offers and rietveld-minimisation. Plotting the contents is the next phase and was not started (B02: "do not do, for the moment").</p><div class="src"><a href="../brief/index.html#B02">B02</a> · <a href="../brief/index.html#B03">B03</a> · <a href="../about/index.html">Method</a> · <a href="../roadmap/index.html">Roadmap</a></div></article>
+<h2 id="changed" class="anchored">What was changed, and what was not</h2>
+<ul class="k-list">
+<li><b>Changed.</b> The permission bits of the 101 original files, from <code>----------</code> to <code>-rw-r--r--</code> (P02). The folder's name, <code>edited-files-hc6528_400_4 2</code> → <code>originals</code> (P10).</li>
+<li><b>Not changed.</b> The names of the original files, their contents, their sizes, their modification times (10–11 June 2026), the folder's own permission bits and quarantine attribute, and the zip.</li>
+<li><b>Added.</b> <code>renamed/</code> with 101 copies, <code>file_index.csv</code>, <code>README.md</code>, <code>ecosystem/</code> (this site), <code>CLAUDE.md</code>, a git repository.</li>
+<li><b>Proof.</b> The SHA-256 of every original is in <code>file_index.csv</code>; <code>tools/analyze.py</code> recomputes it from <code>originals/</code> and from <code>renamed/</code> and stops the build if any of the three disagree.</li>
+</ul>
+
+<h2 id="repeat" class="anchored">How to repeat it</h2>
+<p>From the project folder, with Python 3 and numpy. The folder rename and the copies are already done; the statistics and the checks are repeated by the site's own tools.</p>
+<pre>cd ecosystem
+python3 tools/analyze.py        # re-reads the 101 originals, re-checks every checksum, writes data/scans.json
+python3 tools/build.py          # the pages from data/*
+cd site &amp;&amp; quarto render        # pre-render runs build.py again; the site in _site/</pre>
+<p>To redo the copies from scratch (for instance after D2 changes the scheme): delete <code>renamed/</code>, rebuild it from <code>originals/</code> and the mapping in <code>file_index.csv</code> with <code>shutil.copy2</code>, and run <code>analyze.py</code>, which refuses any copy whose hash differs from its original.</p>
+<p>The crude peak count is defined once, in <code>analyze.py</code>: local maxima more than 6 esd above a 301-point rolling median, 2θ above 1°. Change the window or the threshold there and every page follows.</p>
+</div>
+
+
+<!-- Closes the reading column opened by _gen/docs-nav.html, adds the right
+     "On this page" list, and wires: current-page marking in the left nav,
+     breadcrumbs, the page TOC (from h2/h3 in the reading column) and a
+     scroll-spy. Pure DOM, no library. -->
+  </div>
+  <aside class="docs-toc"><button class="docs-fold" type="button" data-fold="toc" aria-label="Hide the page outline" title="Hide the page outline">›</button><div class="t">On this page</div><ol></ol></aside>
+</div>
+<script>
+(function () {
+  /* 0. The two side panels fold on their chevrons; the choice is remembered in this browser. */
+  var docs = document.querySelector('.docs');
+  if (docs) {
+    var store = {};
+    try { store = JSON.parse(localStorage.getItem('docs-fold') || '{}'); } catch (e) { store = {}; }
+    function apply() {
+      docs.classList.toggle('nav-folded', !!store.nav);
+      docs.classList.toggle('toc-folded', !!store.toc);
+      document.querySelectorAll('.docs-fold').forEach(function (b) {
+        var which = b.getAttribute('data-fold'), folded = !!store[which];
+        b.innerHTML = (which === 'nav') === folded ? '&rsaquo;' : '&lsaquo;';
+        var what = which === 'nav' ? 'the navigation' : 'the page outline';
+        b.title = (folded ? 'Show ' : 'Hide ') + what; b.setAttribute('aria-label', b.title);
+      });
+    }
+    document.querySelectorAll('.docs-fold').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var which = b.getAttribute('data-fold'); store[which] = !store[which];
+        try { localStorage.setItem('docs-fold', JSON.stringify(store)); } catch (e) {}
+        apply();
+      });
+    });
+    apply();
+  }
+  /* 0b. The header ribbon: mark the entry whose section holds this page. Quarto rewrites the hrefs to
+     relative paths, so folders are read from the resolved URLs; the Overview link gives the site root. */
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a'));
+    if (!links.length) return;
+    /* a served URL may end in '/' (GitHub Pages: …/about/); read it as …/about/index.html */
+    function folder(path) { if (/\/$/.test(path)) path += 'index.html'; var s = path.split('/').filter(Boolean); return s.length > 1 ? s[s.length - 2] : ''; }
+    var wm = document.querySelector('a.wordmark');            // the wordmark links to the site root
+    var root = folder((wm || links[0]).pathname);
+    var map = { rietveld: 'cases', drude: 'cases', dielectric: 'cases' };
+    function key(path) { var f = folder(path); if (f === root) return 'overview'; return map[f] || f; }
+    var here = key(location.pathname);
+    links.forEach(function (a) { a.classList.toggle('current', key(a.pathname) === here); });
+  })();
+
+  var main = document.querySelector('.docs-main');
+  var nav = document.querySelector('.docs-nav');
+  var toc = document.querySelector('.docs-toc ol');
+  if (!main || !nav || !toc) return;
+
+  /* 1. Left nav: mark the current page (and section, if the hash matches). */
+  var here = location.pathname.replace(/\/index\.html$/, '/');
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var pageLink = null, hashLink = null;
+  links.forEach(function (a) {
+    var p = a.pathname.replace(/\/index\.html$/, '/');
+    if (p !== here) return;
+    if (!a.hash && !pageLink) pageLink = a;
+    if (a.hash && a.hash === location.hash) hashLink = a;
+  });
+  var cur = hashLink || pageLink;
+  if (cur) {
+    cur.classList.add('current');
+    var det = cur.closest('details.group');
+    if (det) { det.open = true; det.classList.add('has-current'); }
+    /* Breadcrumbs: group title › page (› section). */
+    var crumbs = document.createElement('div');
+    crumbs.className = 'docs-crumbs';
+    var g = det ? det.querySelector('summary.t') : null;
+    var parts = [];
+    function push(t) { if (t && parts[parts.length - 1] !== t) parts.push(t); }
+    if (g) push(g.textContent.trim());
+    if (pageLink && pageLink !== cur) push(pageLink.textContent.trim());
+    push(cur.textContent.trim());
+    crumbs.innerHTML = parts.map(function (t, i) {
+      return (i ? '<span class="sep">›</span>' : '') + '<span>' + t.replace(/</g, '&lt;') + '</span>';
+    }).join('');
+    main.insertBefore(crumbs, main.firstChild);
+  }
+
+  /* 2. Right "On this page": h2 and h3 of the reading column. */
+  var used = {};
+  var heads = Array.prototype.slice.call(main.querySelectorAll('h2, h3')).filter(function (h) {
+    if (h.closest('.site-foot, .featured-band, .msg-grid, [data-toc="no"]')) return false;
+    if (h.classList.contains('unnumbered') || h.id === 'contenido') return false;
+    return h.textContent.trim().length > 0;
+  });
+  heads.forEach(function (h) {
+    if (!h.id) {
+      var s = h.textContent.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'sec';
+      while (used[s] || document.getElementById(s)) s += '-';
+      h.id = s;
+    }
+    used[h.id] = true;
+    var li = document.createElement('li');
+    if (h.tagName === 'H3') li.className = 'l3';
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    /* This runs before KaTeX has rendered the headings, so a heading with mathematics still holds TeX
+       source: copy its markup, including the math spans, and let the page's KaTeX pass render the copy. */
+    var copy = h.cloneNode(true);
+    copy.querySelectorAll('.katex-mathml, annotation, .anchorjs-link').forEach(function (n) { n.remove(); });
+    var label = copy.textContent.trim().replace(/\s+/g, ' ');
+    if (copy.querySelector('.math, .math-done, .katex')) a.innerHTML = copy.innerHTML.trim();
+    else a.textContent = label.length > 72 ? label.slice(0, 70).replace(/[\s,;:]+\S*$/, '') + '…' : label;
+    a.title = label;
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+  if (!heads.length) { document.querySelector('.docs-toc').hidden = true; return; }
+
+  /* 3. Scroll-spy. */
+  var items = Array.prototype.slice.call(toc.querySelectorAll('a'));
+  function spy() {
+    var y = window.scrollY + 120, best = null;
+    heads.forEach(function (h) { if (h.getBoundingClientRect().top + window.scrollY <= y) best = h; });
+    items.forEach(function (a) { a.classList.toggle('current', best && a.getAttribute('href') === '#' + best.id); });
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  window.addEventListener('hashchange', spy);
+  spy();
+})();
+</script>
+<footer class="site-foot">
+  <div class="site-foot__inner">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <h4 class="anchored">What this is</h4>
+        <p>The working site of the ESRF ID22 measurements proposed by Irene Urcelay-Olabarria (proposal HC-6528, sample 400_4), taken by Irene, Iñigo González de Arrieta and Mireia Sainz-Menchón: 101 powder diffraction scans from 900 to 1300 °C kept exactly as received, copied under names that say what they are, the figures of their evolution, and everything the team needs to interpret them, logged step by step. Josu M. Igartua treats the data.</p>
+        <div class="cite-block">Irene Urcelay-Olabarria (proposer) · Iñigo González de Arrieta &amp; Mireia Sainz-Menchón (experimental team, with Irene) · Josu M. Igartua (data treatment)<br>thermomat, Fisika Saila, EHU</div>
+      </div>
+      <div><h4 class="anchored">This site</h4><ul>
+        <li><a href="../index.html">Overview</a></li><li><a href="../brief/index.html">Brief</a></li><li><a href="../protocol/index.html">Protocol</a></li><li><a href="../data/index.html">Data</a></li><li><a href="../timeline/index.html">Timeline</a></li><li><a href="../figures/index.html">Figures</a></li><li><a href="../findings/index.html">Findings</a></li><li><a href="../ideas/index.html">Ideas</a></li><li><a href="../questions/index.html">Questions</a></li><li><a href="../decisions/index.html">Decisions</a></li><li><a href="../roadmap/index.html">Roadmap</a></li><li><a href="../about/index.html">Method</a></li><li><a href="../log/index.html">Log</a></li><li><a href="../benchmark/index.html">Benchmark</a></li></ul></div>
+      <div><h4 class="anchored">The group</h4><ul>
+        <li><a href="https://www.thermomat.eus">thermomat.eus</a></li>
+        <li><a href="https://www.ehu.eus">EHU</a></li>
+        <li><a href="https://www.esrf.fr">ESRF</a></li></ul></div>
+      <div><h4 class="anchored">Status</h4><ul>
+        <li>Phase 0, extraction: closed</li>
+        <li>Phase 1, the figures: projections done (L010); the app next (I12)</li>
+        <li>Published for the team at <a href="https://jmigartua.github.io/esrf-hc6528-400-4/">jmigartua.github.io/esrf-hc6528-400-4</a>; not indexed (L015)</li>
+        <li>Rebuilt from <code>data/*</code> on every render</li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 thermomat research group · unpublished measurements · work in progress</span>
+      <span>Quarto · family design kit</span>
+    </div>
+  </div>
+</footer>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

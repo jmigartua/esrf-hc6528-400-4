@@ -1,0 +1,120 @@
+/* Rules of this project only; theme.css and site.css are the family kit, copied unchanged from thermomat-phd-offers
+   (L006). Its identity: a deep synchrotron blue as the primary (the kit names its primary token --teal for history),
+   the family amber as the second accent. */
+:root {
+  --teal: #1f4e79; --teal-soft: #35689a; --amber: #a86a12;
+  --ok: #2e6b5e; --warn: #8a6a00; --bad: #9a3f3f;
+  --blue-tint: #eef3f9;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --teal: #8fb8e6; --teal-soft: #adc9ee; --amber: #e0b060;
+    --ok: #7fc4b3; --warn: #e3c15a; --bad: #e08a8a;
+    --blue-tint: #1b2430;
+  }
+}
+
+/* Shared labels. */
+.lbl { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 3px; }
+.pid { font-family: var(--mono); font-size: 12px; color: var(--teal); letter-spacing: 0.04em; }
+.whose { font-size: 13px; color: var(--ink-soft); font-style: italic; }
+.m { color: var(--ink-faint); font-size: 13px; }
+.lede { font-size: 17px; color: var(--ink-soft); max-width: 78ch; margin: 0 0 22px; }
+.sub { font-size: 15.5px; color: var(--ink-soft); max-width: 78ch; margin: 0 0 18px; }
+.page-article > h2, .page-wide > h2 { font-family: var(--serif); font-size: 23px; font-weight: 600; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); scroll-margin-top: calc(var(--head-h) + 16px); }
+.page-article > h3, .page-wide > h3 { font-family: var(--serif); font-size: 18.5px; font-weight: 600; margin: 26px 0 8px; }
+.page-article > p, .page-article > ul, .page-article > ol { font-size: 16px; max-width: 78ch; }
+.page-article pre, .page-wide pre { background: var(--tint); border: 1px solid var(--line-soft); padding: 10px 14px; font-size: 13px; overflow-x: auto; }
+.k-list { list-style: none; padding-left: 0; }
+.k-list li { padding: 8px 0; border-bottom: 1px solid var(--line-soft); font-size: 15.5px; max-width: 78ch; }
+.k-list li b { color: var(--ink); }
+
+/* Verbatim texts: the brief. */
+.verbatim { border-left: 3px solid var(--teal); background: var(--tint); padding: 12px 18px; margin: 14px 0 22px; font-family: var(--serif); font-size: 15.5px; white-space: pre-wrap; overflow-wrap: anywhere; scroll-margin-top: calc(var(--head-h, 92px) + 12px); }
+.verbatim .who { display: block; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; white-space: normal; }
+
+/* The protocol: numbered steps with command and evidence. */
+.step { border-top: 1px solid var(--line); padding: 18px 0 10px; scroll-margin-top: calc(var(--head-h, 92px) + 12px); }
+.step:last-child { border-bottom: 1px solid var(--line); }
+.step-head { display: flex; gap: 12px; align-items: center; }
+.phase-tag { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--amber); border: 1px solid currentColor; padding: 0 7px; border-radius: 2px; }
+.step h3 { font-family: var(--serif); font-size: 19px; font-weight: 600; margin: 6px 0 8px; line-height: 1.3; }
+.step p, .step ul { font-size: 15.5px; max-width: 78ch; margin: 0 0 8px; }
+.step pre.cmd { background: #1c1f23; color: #e8e6e1; border: none; padding: 10px 14px; font-size: 12.5px; max-width: 78ch; }
+@media (prefers-color-scheme: dark) { .step pre.cmd { background: #0f1113; } }
+.evidence { border-left: 3px solid var(--ok); background: var(--tint); padding: 8px 14px 2px; margin: 8px 0 10px; max-width: 78ch; }
+.evidence p, .evidence ul { font-size: 14.5px; }
+.evidence pre { font-size: 12.5px; background: var(--paper); }
+.step .src, .card .src { font-family: var(--mono); font-size: 12.5px; color: var(--ink-faint); margin-top: 6px; }
+
+/* Cards: findings, ideas, questions. */
+.card { border: 1px solid var(--line-soft); border-left: 4px solid var(--teal); padding: 12px 18px 8px; margin: 16px 0; background: var(--paper); scroll-margin-top: calc(var(--head-h, 92px) + 12px); }
+.card h3 { font-family: var(--serif); font-size: 19px; font-weight: 600; margin: 0 0 6px; line-height: 1.3; }
+.card h3 .num { font-family: var(--mono); font-size: 12px; color: var(--teal); letter-spacing: 0.04em; margin-right: 6px; font-weight: 400; }
+.card h3 .status { vertical-align: middle; margin-left: 8px; }
+.card .param-meta { font-family: var(--mono); font-size: 12px; color: var(--ink-faint); margin: 0 0 8px; }
+.card p, .card ul { font-size: 15px; max-width: 78ch; margin: 0 0 8px; }
+.status-verified, .status-done, .status-answered, .status-long { color: var(--ok); border-color: var(--ok); }
+.status-planned, .status-doing { color: var(--amber); border-color: var(--amber); }
+.status-idea, .status-short { color: var(--ink-soft); border-color: var(--line); }
+.status-declined { color: var(--bad); border-color: var(--bad); }
+
+/* Decisions. */
+.dec { border: 1px solid var(--line-soft); border-left: 4px solid var(--amber); padding: 12px 18px 8px; margin: 16px 0; background: var(--paper); scroll-margin-top: calc(var(--head-h, 92px) + 12px); }
+.dec-head { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.dec h3 { margin: 6px 0 8px; font-size: 18px; line-height: 1.3; }
+.dec p, .dec ul { margin: 0 0 8px; font-size: 15px; max-width: 78ch; }
+.dec-ans { background: var(--tint); border-left: 3px solid var(--ok); padding: 8px 12px 2px; margin: 8px 0; }
+
+/* The scans table. */
+.scans { font-size: 13px; }
+.scans th { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-faint); text-align: left; vertical-align: bottom; }
+.scans td.num { font-family: var(--mono); font-size: 12.5px; text-align: right; white-space: nowrap; }
+.scans td code { font-size: 12px; }
+.scans .orig { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); }
+.scans .sha { font-family: var(--mono); font-size: 11px; }
+.scans tr.cls-long td { background: var(--blue-tint); }
+.scans tr.anomaly td { background: color-mix(in srgb, var(--bad) 10%, var(--paper)); }
+.scans tr { scroll-margin-top: calc(var(--head-h, 92px) + 12px); }
+.table-note { font-size: 13.5px; color: var(--ink-faint); margin: 8px 0 24px; max-width: 90ch; }
+
+/* The naming scheme, field by field. */
+.scheme { font-family: var(--mono); font-size: 15px; background: var(--tint); padding: 12px 16px; border: 1px solid var(--line-soft); overflow-x: auto; margin: 10px 0 14px; }
+.scheme b { color: var(--teal); font-weight: 600; }
+.fields { display: grid; grid-template-columns: 150px 1fr; gap: 6px 16px; font-size: 14.5px; margin: 0 0 20px; max-width: 86ch; }
+.fields .k { font-family: var(--mono); font-size: 12.5px; color: var(--teal); padding-top: 2px; }
+@media (max-width: 640px) { .fields { grid-template-columns: 1fr; } }
+
+/* Timeline: the kit's .tline, with a stats line. */
+.tline li p.m { font-family: var(--mono); font-size: 12px; margin-top: 4px; }
+.tline li { scroll-margin-top: calc(var(--head-h, 92px) + 12px); }
+
+/* Phones (thermomat L009): the kit's theme.css makes the left navigation static under 760px, but site.css, loaded
+   after it, sets it sticky at every width. Restored here, with the folding of the side panels switched off there. */
+@media (max-width: 760px) {
+  .docs-nav { position: static; top: auto; max-height: none; overflow: visible; }
+  .docs-nav .docs-fold, .docs-toc .docs-fold { display: none; }
+  .docs.nav-folded, .docs.toc-folded, .docs.nav-folded.toc-folded, .docs.docs-wide.nav-folded { grid-template-columns: 1fr; }
+  .docs.nav-folded .docs-nav > :not(.docs-fold) { display: block; }
+}
+
+/* Figures (drs-publish's builds) and the benchmark table. */
+.fig { margin: 22px 0 30px; max-width: 980px; scroll-margin-top: calc(var(--head-h, 92px) + 12px); }
+.fig img { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: #fff; }
+.fig figcaption { font-size: 14.5px; color: var(--ink-soft); margin-top: 8px; line-height: 1.5; }
+.fig figcaption b { color: var(--ink); }
+.fig-meta { display: block; font-family: var(--mono); font-size: 12px; color: var(--ink-faint); margin-top: 4px; }
+.bench { font-size: 13.5px; }
+.bench th { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-faint); text-align: left; vertical-align: bottom; }
+.bench td.num { font-family: var(--mono); font-size: 12.5px; text-align: right; white-space: nowrap; vertical-align: top; }
+.bench td { vertical-align: top; }
+.queued { margin: 6px 0 0; padding-left: 16px; font-size: 13px; color: var(--ink-soft); }
+.queued li { margin-bottom: 2px; }
+.status-seen, .status-answered-in-part { color: var(--amber); border-color: var(--amber); }
+/* Benchmark: a task on its own row, its numbers on the row below (B07). */
+.bench tr.task td { border-top: 2px solid var(--line); padding-top: 14px; font-size: 15px; }
+.bench tr.task .pid { margin-right: 8px; }
+.bench tr.nums td { border-top: none; padding-top: 2px; padding-bottom: 14px; text-align: left; white-space: normal; }
+.bench tr.nums td .m { font-family: var(--mono); font-size: 11.5px; }
+.bench th { text-align: left; }
+.queued li { line-height: 1.45; margin: 0 0 4px; overflow-wrap: anywhere; }

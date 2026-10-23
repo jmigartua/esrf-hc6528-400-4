@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Benchmark · ESRF hc6528 · 400_4 – ESRF hc6528 · 400_4 · in-situ powder diffraction</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html-afe927e19676d0e50b1726048be49fb1.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- The site is for the team while the measurements are unpublished (L015): anyone with the link reads it, search engines do not list it. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<!-- KaTeX auto-render: publication titles carry TeX inside generated HTML that
+     Quarto's own math pipeline never sees (same approach as thermomat). -->
+<script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script>
+/* The header ribbon is sticky; the side columns and anchor targets need its height. */
+(function () {
+  function headH() {
+    var t = document.querySelector(".topline"), h = document.querySelector(".site-head");
+    var px = (t ? t.offsetHeight : 0) + (h ? h.offsetHeight : 0);
+    if (px) document.documentElement.style.setProperty("--head-h", px + "px");
+  }
+  document.addEventListener("DOMContentLoaded", headH);
+  window.addEventListener("load", headH);
+  window.addEventListener("resize", headH);
+})();
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }, { left: "\\(", right: "\\)", display: false }],
+      throwOnError: false
+    });
+  }
+  /* Quarto's KaTeX pipeline writes <span class="math inline">TeX</span> without delimiters and renders
+     them in a loop that reads firstChild.data; that loop dies at the first span the auto-render above
+     has already turned into KaTeX markup, leaving every later formula raw. Render the rest here. */
+  if (window.katex) {
+    document.querySelectorAll(".math").forEach(function (el) {
+      if (!el.querySelector(".katex")) {
+        var t = el.textContent.replace(/^\s*\\[\(\[]/, "").replace(/\\[\)\]]\s*$/, "");
+        try { katex.render(t, el, { displayMode: el.classList.contains("display"), throwOnError: false }); } catch (e) {}
+      }
+      /* Quarto's loop would still visit this span and wipe it (firstChild is now an element, not text):
+         take it out of its sight. No stylesheet of the site depends on the class; KaTeX's own output carries the layout. */
+      el.classList.remove("math"); el.classList.add("math-done");
+    });
+  }
+});
+</script>
+
+
+<link rel="stylesheet" href="../assets/styles/theme.css">
+<link rel="stylesheet" href="../assets/styles/site.css">
+<link rel="stylesheet" href="../assets/styles/project.css">
+</head>
+
+<body>
+
+<!-- Site header, family kit. Root-absolute hrefs are rewritten by Quarto to page-relative links at render time. -->
+<div class="topline"></div>
+<header class="site-head">
+  <div class="site-head__inner">
+    <a href="../index.html" class="wordmark">ESRF hc6528 <span class="accent">· 400_4</span>
+      <span class="wordmark-sub">Irene's in-situ powder diffraction, 900 → 1300 °C · the files, the extraction, the analysis to come · thermomat, Fisika Saila, EHU · from 23 October 2026</span>
+    </a>
+    <!-- The entries are the groups of data/nav.yml, in the same order; the two navigations say the same thing. -->
+    <nav class="site-nav">
+      <a href="../index.html">Overview</a>
+      <a href="../brief/index.html">Brief</a>
+      <a href="../protocol/index.html">Protocol</a>
+      <a href="../data/index.html">Data</a>
+      <a href="../timeline/index.html">Timeline</a>
+      <a href="../figures/index.html">Figures</a>
+      <a href="../findings/index.html">Findings</a>
+      <a href="../ideas/index.html">Ideas</a>
+      <a href="../questions/index.html">Questions</a>
+      <a href="../decisions/index.html">Decisions</a>
+      <a href="../roadmap/index.html">Roadmap</a>
+      <span class="nav-right">
+        <span class="nav-pair"><a href="../about/index.html">Method</a><span class="sl">/</span><a href="../log/index.html">Log</a><span class="sl">/</span><a href="../benchmark/index.html">Benchmark</a></span>
+      </span>
+    </nav>
+  </div>
+</header>
+<!-- generated by tools/build.py: left navigation + opening of the reading column -->
+<div class="docs">
+<nav class="docs-nav" aria-label="Site sections">
+<button class="docs-fold" type="button" data-fold="nav" aria-label="Hide the navigation" title="Hide the navigation">‹</button>
+<details class="group" open=""><summary class="t">Overview</summary><ul><li><a href="../index.html">Overview</a></li></ul></details>
+<details class="group" open=""><summary class="t">Brief</summary><ul><li><a href="../brief/index.html">Josu's messages, verbatim</a></li></ul></details>
+<details class="group" open=""><summary class="t">Protocol</summary><ul><li><a href="../protocol/index.html">The extraction, step by step</a></li><li><a href="../protocol/index.html#changed">What was changed, and what was not</a></li><li><a href="../protocol/index.html#repeat">How to repeat it</a></li></ul></details>
+<details class="group" open=""><summary class="t">Data</summary><ul><li><a href="../data/index.html">The 101 files</a></li><li><a href="../data/index.html#format">File format</a></li><li><a href="../data/index.html#naming">The naming scheme</a></li><li><a href="../data/index.html#table">The table, one row per scan</a></li></ul></details>
+<details class="group" open=""><summary class="t">Timeline</summary><ul><li><a href="../timeline/index.html">The experiment's stages</a></li></ul></details>
+<details class="group" open=""><summary class="t">Figures</summary><ul><li><a href="../figures/index.html">How the diffractograms evolve</a></li><li><a href="../figures/index.html#g-ramp">The 19 long scans against T</a></li><li><a href="../figures/index.html#g-all">All 100 scans against time</a></li><li><a href="../figures/index.html#g-hold">The 1270 °C hold</a></li><li><a href="../figures/index.html#g-map-temp">Maps: temperature–2θ plane</a></li><li><a href="../figures/index.html#g-map-time">Maps: time–2θ, all scans</a></li><li><a href="../figures/index.html#g-map-hold">Maps: the hold</a></li><li><a href="../figures/index.html#made">How they are made</a></li></ul></details>
+<details class="group" open=""><summary class="t">Findings</summary><ul><li><a href="../findings/index.html">What the files show</a></li></ul></details>
+<details class="group" open=""><summary class="t">Ideas</summary><ul><li><a href="../ideas/index.html">What to do with the data</a></li></ul></details>
+<details class="group" open=""><summary class="t">Questions</summary><ul><li><a href="../questions/index.html">For Irene and the group</a></li></ul></details>
+<details class="group" open=""><summary class="t">Decisions</summary><ul><li><a href="../decisions/index.html">Open and answered</a></li></ul></details>
+<details class="group" open=""><summary class="t">Roadmap</summary><ul><li><a href="../roadmap/index.html">Phases</a></li></ul></details>
+<details class="group" open=""><summary class="t">Method / Log</summary><ul><li><a href="../about/index.html">How this site works</a></li><li><a href="../log/index.html">The log, every dated step</a></li><li><a href="../benchmark/index.html">Benchmark: every task timed</a></li></ul></details>
+</nav>
+<div class="docs-main">
+
+<header id="title-block-header">
+<h1 class="title">Benchmark</h1>
+
+</header>
+
+
+<div class="page-wide">
+<h1>Every task timed</h1>
+<p class="lede">How long the work took, measured from Claude Code's own transcript rather than typed (L011). A task is one prompt of Josu's, from the moment it was sent to the last event before the next prompt; the messages he sent while a task ran are listed under it. For each task: the clock times, the wall time, the time the model spent generating and the time tools spent running (two separate parts of the wall time; the harness, the hooks and the reading of results take the rest), the tool calls by kind, and the tokens written. Rebuilt with the site by <code>tools/timing.py</code>; the open task runs to the last event recorded.</p>
+<h2 id="s-3af25377" class="anchored">Session 3af25377 · 2026-10-23</h2><div class="facts"><div class="k">From</div><div>2026-10-23 18:09:53 (the first prompt)</div><div class="k">To</div><div>2026-10-23 19:26:33 (the last event in the transcript when this page was built)</div><div class="k">Elapsed</div><div>76.7 min · 3 prompts · 194 tool calls</div><div class="k">Model time</div><div>38.8 min generating (thinking and writing), 38.0 min waiting for tools; the rest is the harness and Josu's typing</div><div class="k">Tokens</div><div>1,293,171 written (187,373 of them thinking) · 89,620,152 read from cache · 2,229,971 written to cache</div><div class="k">Model</div><div><code>claude-fable-5-1</code></div></div>
+<div class="table-wrap">
+<table class="bench caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Started</th>
+<th data-quarto-table-cell-role="th">Finished</th>
+<th data-quarto-table-cell-role="th">Wall, min</th>
+<th data-quarto-table-cell-role="th">Model, min</th>
+<th data-quarto-table-cell-role="th">Tools, min</th>
+<th data-quarto-table-cell-role="th">Tool calls</th>
+<th data-quarto-table-cell-role="th">Tokens written</th>
+</tr>
+</thead>
+<tbody>
+<tr id="t1" class="task odd">
+<td colspan="7"><span class="pid">T1</span> T1 · The extraction: the files read, named, copied, verified, described (P01–P13)</td>
+</tr>
+<tr class="nums even">
+<td class="num">18:09:53</td>
+<td class="num">18:18:28</td>
+<td class="num">8.6</td>
+<td class="num">3.9</td>
+<td class="num">0.4</td>
+<td class="num">9<span class="m"> · 8 Bash, 1 Write</span></td>
+<td class="num">42,368<span class="m"> · 23,292 thinking</span></td>
+</tr>
+<tr id="t2" class="task odd">
+<td colspan="7"><span class="pid">T2</span> T2 · The protocol logged and the site built in the family's form (L006, L007); 'rich' and 'all to the website' queued
+<ul>
+<li><span class="m">18:20:31</span> it should have al the entries, ideas, log method, brief, etc all of them, it should be rich, because we are goin to continue working on it</li>
+</ul></td>
+</tr>
+<tr class="nums even">
+<td class="num">18:18:28</td>
+<td class="num">18:36:41</td>
+<td class="num">18.2</td>
+<td class="num">12.7</td>
+<td class="num">1.8</td>
+<td class="num">70<span class="m"> · 33 Write, 29 Bash, 4 Read, 3 Edit, 1 Skill</span></td>
+<td class="num">718,706<span class="m"> · 29,222 thinking</span></td>
+</tr>
+<tr id="t3" class="task odd">
+<td colspan="7"><span class="pid">T3</span> T3 · The figures through diff-ref-struct (core + drs-publish): projections, then the maps; ID22; the benchmark; the maps; published for the team (L008–L015) <span class="status status-doing">open</span>
+<ul>
+<li><span class="m">18:38:54</span> of course, all this goes to the website, log etc</li>
+<li><span class="m">18:52:49</span> in there, instead of originals etc write Irene Urcelay-Olabarria &amp; Josu M. Igartua and could you estimate the complete time you have used to create everything f</li>
+<li><span class="m">19:06:13</span> I would like to have also the projections, in the plane temperature vs 2theta</li>
+<li><span class="m">19:08:50</span> that is not ver pleasant to read...think about given it in some othe way, a table, is good, but perhaps the task could take a roa,and the then rest of the eleme</li>
+<li><span class="m">19:21:58</span> then, I would like to shre the website with Irene, so I would like you to create the repo, and publish it and mention also Iñigo González de Arrieta ans Mireia</li>
+</ul></td>
+</tr>
+<tr class="nums even">
+<td class="num">18:36:41</td>
+<td class="num">19:26:33</td>
+<td class="num">49.9</td>
+<td class="num">22.2</td>
+<td class="num">35.8</td>
+<td class="num">115<span class="m"> · 73 Bash, 18 Edit, 17 Read, 7 Write</span></td>
+<td class="num">532,097<span class="m"> · 134,859 thinking</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">Computed by <code>tools/timing.py</code> on 2026-10-23 19:26 from the transcripts in <code>/Users/User/.claude/projects/-Users-User-Desktop-2026-20261001-20261023-esrf-datuak-irene</code>. A task runs from its prompt to the last event before the next prompt; the open task runs to the last event recorded. Model time is the sum of the gaps before each of the model's messages; tool time the sum of each tool's run; the two overlap nowhere and do not add up to the wall time (the harness, hooks and the reading of results take the rest).</p>
+<h2 class="anchored">What is measured, and what is not</h2>
+<ul class="k-list">
+<li><b>Wall time</b> is the honest number for "how long did it take": prompt to last event. It includes the time Josu spent reading and typing between the model's messages within a task, which is small here, and the waits for tools.</li>
+<li><b>Model time</b> sums the gap before each message of the model: thinking and writing, with the harness's round trips inside it. <b>Tool time</b> sums each tool's run from call to result: shell commands, file reads and writes, the Quarto render, the LuaLaTeX builds (one of them, a 600 s timeout, is most of T3's tool time).</li>
+<li><b>Tokens</b> are the model's own counts: written (thinking apart), read from the cache, written to the cache. Cost follows from them at the model's prices (I13).</li>
+<li><b>Not measured</b>: the time before the first prompt (Josu's extraction of the zip, his reading of the files), and anything done outside this session (the opening of the app, a later session: it would be a second block on this page).</li>
+</ul>
+
+<h2 class="anchored">Why from the transcript</h2>
+<p>A timestamp typed at the start and the end of a task is a second record that drifts from the first: it is forgotten, rounded, or written after the fact. The transcript is written anyway, to the millisecond, for every event, and it holds more than two stamps: where the time went (model, tools, waiting), what it was spent on (which tools, how many times), how much was written, and when the brief changed mid-task. One script reads it and the page follows. The same script, pointed at another project's transcripts, benchmarks that project (I13).</p>
+</div>
+
+
+<!-- Closes the reading column opened by _gen/docs-nav.html, adds the right
+     "On this page" list, and wires: current-page marking in the left nav,
+     breadcrumbs, the page TOC (from h2/h3 in the reading column) and a
+     scroll-spy. Pure DOM, no library. -->
+  </div>
+  <aside class="docs-toc"><button class="docs-fold" type="button" data-fold="toc" aria-label="Hide the page outline" title="Hide the page outline">›</button><div class="t">On this page</div><ol></ol></aside>
+</div>
+<script>
+(function () {
+  /* 0. The two side panels fold on their chevrons; the choice is remembered in this browser. */
+  var docs = document.querySelector('.docs');
+  if (docs) {
+    var store = {};
+    try { store = JSON.parse(localStorage.getItem('docs-fold') || '{}'); } catch (e) { store = {}; }
+    function apply() {
+      docs.classList.toggle('nav-folded', !!store.nav);
+      docs.classList.toggle('toc-folded', !!store.toc);
+      document.querySelectorAll('.docs-fold').forEach(function (b) {
+        var which = b.getAttribute('data-fold'), folded = !!store[which];
+        b.innerHTML = (which === 'nav') === folded ? '&rsaquo;' : '&lsaquo;';
+        var what = which === 'nav' ? 'the navigation' : 'the page outline';
+        b.title = (folded ? 'Show ' : 'Hide ') + what; b.setAttribute('aria-label', b.title);
+      });
+    }
+    document.querySelectorAll('.docs-fold').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var which = b.getAttribute('data-fold'); store[which] = !store[which];
+        try { localStorage.setItem('docs-fold', JSON.stringify(store)); } catch (e) {}
+        apply();
+      });
+    });
+    apply();
+  }
+  /* 0b. The header ribbon: mark the entry whose section holds this page. Quarto rewrites the hrefs to
+     relative paths, so folders are read from the resolved URLs; the Overview link gives the site root. */
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a'));
+    if (!links.length) return;
+    /* a served URL may end in '/' (GitHub Pages: …/about/); read it as …/about/index.html */
+    function folder(path) { if (/\/$/.test(path)) path += 'index.html'; var s = path.split('/').filter(Boolean); return s.length > 1 ? s[s.length - 2] : ''; }
+    var wm = document.querySelector('a.wordmark');            // the wordmark links to the site root
+    var root = folder((wm || links[0]).pathname);
+    var map = { rietveld: 'cases', drude: 'cases', dielectric: 'cases' };
+    function key(path) { var f = folder(path); if (f === root) return 'overview'; return map[f] || f; }
+    var here = key(location.pathname);
+    links.forEach(function (a) { a.classList.toggle('current', key(a.pathname) === here); });
+  })();
+
+  var main = document.querySelector('.docs-main');
+  var nav = document.querySelector('.docs-nav');
+  var toc = document.querySelector('.docs-toc ol');
+  if (!main || !nav || !toc) return;
+
+  /* 1. Left nav: mark the current page (and section, if the hash matches). */
+  var here = location.pathname.replace(/\/index\.html$/, '/');
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var pageLink = null, hashLink = null;
+  links.forEach(function (a) {
+    var p = a.pathname.replace(/\/index\.html$/, '/');
+    if (p !== here) return;
+    if (!a.hash && !pageLink) pageLink = a;
+    if (a.hash && a.hash === location.hash) hashLink = a;
+  });
+  var cur = hashLink || pageLink;
+  if (cur) {
+    cur.classList.add('current');
+    var det = cur.closest('details.group');
+    if (det) { det.open = true; det.classList.add('has-current'); }
+    /* Breadcrumbs: group title › page (› section). */
+    var crumbs = document.createElement('div');
+    crumbs.className = 'docs-crumbs';
+    var g = det ? det.querySelector('summary.t') : null;
+    var parts = [];
+    function push(t) { if (t && parts[parts.length - 1] !== t) parts.push(t); }
+    if (g) push(g.textContent.trim());
+    if (pageLink && pageLink !== cur) push(pageLink.textContent.trim());
+    push(cur.textContent.trim());
+    crumbs.innerHTML = parts.map(function (t, i) {
+      return (i ? '<span class="sep">›</span>' : '') + '<span>' + t.replace(/</g, '&lt;') + '</span>';
+    }).join('');
+    main.insertBefore(crumbs, main.firstChild);
+  }
+
+  /* 2. Right "On this page": h2 and h3 of the reading column. */
+  var used = {};
+  var heads = Array.prototype.slice.call(main.querySelectorAll('h2, h3')).filter(function (h) {
+    if (h.closest('.site-foot, .featured-band, .msg-grid, [data-toc="no"]')) return false;
+    if (h.classList.contains('unnumbered') || h.id === 'contenido') return false;
+    return h.textContent.trim().length > 0;
+  });
+  heads.forEach(function (h) {
+    if (!h.id) {
+      var s = h.textContent.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'sec';
+      while (used[s] || document.getElementById(s)) s += '-';
+      h.id = s;
+    }
+    used[h.id] = true;
+    var li = document.createElement('li');
+    if (h.tagName === 'H3') li.className = 'l3';
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    /* This runs before KaTeX has rendered the headings, so a heading with mathematics still holds TeX
+       source: copy its markup, including the math spans, and let the page's KaTeX pass render the copy. */
+    var copy = h.cloneNode(true);
+    copy.querySelectorAll('.katex-mathml, annotation, .anchorjs-link').forEach(function (n) { n.remove(); });
+    var label = copy.textContent.trim().replace(/\s+/g, ' ');
+    if (copy.querySelector('.math, .math-done, .katex')) a.innerHTML = copy.innerHTML.trim();
+    else a.textContent = label.length > 72 ? label.slice(0, 70).replace(/[\s,;:]+\S*$/, '') + '…' : label;
+    a.title = label;
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+  if (!heads.length) { document.querySelector('.docs-toc').hidden = true; return; }
+
+  /* 3. Scroll-spy. */
+  var items = Array.prototype.slice.call(toc.querySelectorAll('a'));
+  function spy() {
+    var y = window.scrollY + 120, best = null;
+    heads.forEach(function (h) { if (h.getBoundingClientRect().top + window.scrollY <= y) best = h; });
+    items.forEach(function (a) { a.classList.toggle('current', best && a.getAttribute('href') === '#' + best.id); });
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  window.addEventListener('hashchange', spy);
+  spy();
+})();
+</script>
+<footer class="site-foot">
+  <div class="site-foot__inner">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <h4 class="anchored">What this is</h4>
+        <p>The working site of the ESRF ID22 measurements proposed by Irene Urcelay-Olabarria (proposal HC-6528, sample 400_4), taken by Irene, Iñigo González de Arrieta and Mireia Sainz-Menchón: 101 powder diffraction scans from 900 to 1300 °C kept exactly as received, copied under names that say what they are, the figures of their evolution, and everything the team needs to interpret them, logged step by step. Josu M. Igartua treats the data.</p>
+        <div class="cite-block">Irene Urcelay-Olabarria (proposer) · Iñigo González de Arrieta &amp; Mireia Sainz-Menchón (experimental team, with Irene) · Josu M. Igartua (data treatment)<br>thermomat, Fisika Saila, EHU</div>
+      </div>
+      <div><h4 class="anchored">This site</h4><ul>
+        <li><a href="../index.html">Overview</a></li><li><a href="../brief/index.html">Brief</a></li><li><a href="../protocol/index.html">Protocol</a></li><li><a href="../data/index.html">Data</a></li><li><a href="../timeline/index.html">Timeline</a></li><li><a href="../figures/index.html">Figures</a></li><li><a href="../findings/index.html">Findings</a></li><li><a href="../ideas/index.html">Ideas</a></li><li><a href="../questions/index.html">Questions</a></li><li><a href="../decisions/index.html">Decisions</a></li><li><a href="../roadmap/index.html">Roadmap</a></li><li><a href="../about/index.html">Method</a></li><li><a href="../log/index.html">Log</a></li><li><a href="../benchmark/index.html">Benchmark</a></li></ul></div>
+      <div><h4 class="anchored">The group</h4><ul>
+        <li><a href="https://www.thermomat.eus">thermomat.eus</a></li>
+        <li><a href="https://www.ehu.eus">EHU</a></li>
+        <li><a href="https://www.esrf.fr">ESRF</a></li></ul></div>
+      <div><h4 class="anchored">Status</h4><ul>
+        <li>Phase 0, extraction: closed</li>
+        <li>Phase 1, the figures: projections done (L010); the app next (I12)</li>
+        <li>Published for the team at <a href="https://jmigartua.github.io/esrf-hc6528-400-4/">jmigartua.github.io/esrf-hc6528-400-4</a>; not indexed (L015)</li>
+        <li>Rebuilt from <code>data/*</code> on every render</li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 thermomat research group · unpublished measurements · work in progress</span>
+      <span>Quarto · family design kit</span>
+    </div>
+  </div>
+</footer>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

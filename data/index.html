@@ -1,0 +1,2555 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data · ESRF hc6528 · 400_4 – ESRF hc6528 · 400_4 · in-situ powder diffraction</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html-afe927e19676d0e50b1726048be49fb1.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- The site is for the team while the measurements are unpublished (L015): anyone with the link reads it, search engines do not list it. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<!-- KaTeX auto-render: publication titles carry TeX inside generated HTML that
+     Quarto's own math pipeline never sees (same approach as thermomat). -->
+<script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script>
+/* The header ribbon is sticky; the side columns and anchor targets need its height. */
+(function () {
+  function headH() {
+    var t = document.querySelector(".topline"), h = document.querySelector(".site-head");
+    var px = (t ? t.offsetHeight : 0) + (h ? h.offsetHeight : 0);
+    if (px) document.documentElement.style.setProperty("--head-h", px + "px");
+  }
+  document.addEventListener("DOMContentLoaded", headH);
+  window.addEventListener("load", headH);
+  window.addEventListener("resize", headH);
+})();
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }, { left: "\\(", right: "\\)", display: false }],
+      throwOnError: false
+    });
+  }
+  /* Quarto's KaTeX pipeline writes <span class="math inline">TeX</span> without delimiters and renders
+     them in a loop that reads firstChild.data; that loop dies at the first span the auto-render above
+     has already turned into KaTeX markup, leaving every later formula raw. Render the rest here. */
+  if (window.katex) {
+    document.querySelectorAll(".math").forEach(function (el) {
+      if (!el.querySelector(".katex")) {
+        var t = el.textContent.replace(/^\s*\\[\(\[]/, "").replace(/\\[\)\]]\s*$/, "");
+        try { katex.render(t, el, { displayMode: el.classList.contains("display"), throwOnError: false }); } catch (e) {}
+      }
+      /* Quarto's loop would still visit this span and wipe it (firstChild is now an element, not text):
+         take it out of its sight. No stylesheet of the site depends on the class; KaTeX's own output carries the layout. */
+      el.classList.remove("math"); el.classList.add("math-done");
+    });
+  }
+});
+</script>
+
+
+<link rel="stylesheet" href="../assets/styles/theme.css">
+<link rel="stylesheet" href="../assets/styles/site.css">
+<link rel="stylesheet" href="../assets/styles/project.css">
+</head>
+
+<body>
+
+<!-- Site header, family kit. Root-absolute hrefs are rewritten by Quarto to page-relative links at render time. -->
+<div class="topline"></div>
+<header class="site-head">
+  <div class="site-head__inner">
+    <a href="../index.html" class="wordmark">ESRF hc6528 <span class="accent">· 400_4</span>
+      <span class="wordmark-sub">Irene's in-situ powder diffraction, 900 → 1300 °C · the files, the extraction, the analysis to come · thermomat, Fisika Saila, EHU · from 23 October 2026</span>
+    </a>
+    <!-- The entries are the groups of data/nav.yml, in the same order; the two navigations say the same thing. -->
+    <nav class="site-nav">
+      <a href="../index.html">Overview</a>
+      <a href="../brief/index.html">Brief</a>
+      <a href="../protocol/index.html">Protocol</a>
+      <a href="../data/index.html">Data</a>
+      <a href="../timeline/index.html">Timeline</a>
+      <a href="../figures/index.html">Figures</a>
+      <a href="../findings/index.html">Findings</a>
+      <a href="../ideas/index.html">Ideas</a>
+      <a href="../questions/index.html">Questions</a>
+      <a href="../decisions/index.html">Decisions</a>
+      <a href="../roadmap/index.html">Roadmap</a>
+      <span class="nav-right">
+        <span class="nav-pair"><a href="../about/index.html">Method</a><span class="sl">/</span><a href="../log/index.html">Log</a><span class="sl">/</span><a href="../benchmark/index.html">Benchmark</a></span>
+      </span>
+    </nav>
+  </div>
+</header>
+<!-- generated by tools/build.py: left navigation + opening of the reading column -->
+<div class="docs">
+<nav class="docs-nav" aria-label="Site sections">
+<button class="docs-fold" type="button" data-fold="nav" aria-label="Hide the navigation" title="Hide the navigation">‹</button>
+<details class="group" open=""><summary class="t">Overview</summary><ul><li><a href="../index.html">Overview</a></li></ul></details>
+<details class="group" open=""><summary class="t">Brief</summary><ul><li><a href="../brief/index.html">Josu's messages, verbatim</a></li></ul></details>
+<details class="group" open=""><summary class="t">Protocol</summary><ul><li><a href="../protocol/index.html">The extraction, step by step</a></li><li><a href="../protocol/index.html#changed">What was changed, and what was not</a></li><li><a href="../protocol/index.html#repeat">How to repeat it</a></li></ul></details>
+<details class="group" open=""><summary class="t">Data</summary><ul><li><a href="../data/index.html">The 101 files</a></li><li><a href="../data/index.html#format">File format</a></li><li><a href="../data/index.html#naming">The naming scheme</a></li><li><a href="../data/index.html#table">The table, one row per scan</a></li></ul></details>
+<details class="group" open=""><summary class="t">Timeline</summary><ul><li><a href="../timeline/index.html">The experiment's stages</a></li></ul></details>
+<details class="group" open=""><summary class="t">Figures</summary><ul><li><a href="../figures/index.html">How the diffractograms evolve</a></li><li><a href="../figures/index.html#g-ramp">The 19 long scans against T</a></li><li><a href="../figures/index.html#g-all">All 100 scans against time</a></li><li><a href="../figures/index.html#g-hold">The 1270 °C hold</a></li><li><a href="../figures/index.html#g-map-temp">Maps: temperature–2θ plane</a></li><li><a href="../figures/index.html#g-map-time">Maps: time–2θ, all scans</a></li><li><a href="../figures/index.html#g-map-hold">Maps: the hold</a></li><li><a href="../figures/index.html#made">How they are made</a></li></ul></details>
+<details class="group" open=""><summary class="t">Findings</summary><ul><li><a href="../findings/index.html">What the files show</a></li></ul></details>
+<details class="group" open=""><summary class="t">Ideas</summary><ul><li><a href="../ideas/index.html">What to do with the data</a></li></ul></details>
+<details class="group" open=""><summary class="t">Questions</summary><ul><li><a href="../questions/index.html">For Irene and the group</a></li></ul></details>
+<details class="group" open=""><summary class="t">Decisions</summary><ul><li><a href="../decisions/index.html">Open and answered</a></li></ul></details>
+<details class="group" open=""><summary class="t">Roadmap</summary><ul><li><a href="../roadmap/index.html">Phases</a></li></ul></details>
+<details class="group" open=""><summary class="t">Method / Log</summary><ul><li><a href="../about/index.html">How this site works</a></li><li><a href="../log/index.html">The log, every dated step</a></li><li><a href="../benchmark/index.html">Benchmark: every task timed</a></li></ul></details>
+</nav>
+<div class="docs-main">
+
+<header id="title-block-header">
+<h1 class="title">Data</h1>
+
+</header>
+
+
+<div class="page-wide">
+<h1>The 101 files</h1>
+<p class="lede">What is in <code>originals/</code> and <code>renamed/</code>: the format, the fields of the original names, the scheme of the new ones, and one row per scan with the facts computed from its contents. The table is generated from <code>data/scans.json</code>; the files themselves are not copied into the site (D1).</p>
+<div class="facts"><div class="k">Instrument</div><div>ESRF beamline ID22, high-resolution powder diffraction (Josu, 23 October 2026, L008); the reduced <code>.xye</code> files of proposal HC-6528, measured 10–11 June 2026</div><div class="k">Team</div><div>Irene Urcelay-Olabarria, the proposer; Iñigo González de Arrieta and Mireia Sainz-Menchón, the experimental team with her; Josu M. Igartua, the treatment of the data for their interpretation (L015)</div><div class="k">Files</div><div>101 <code>.xye</code> scans: 100 with the sample, 1 empty-capillary background</div><div class="k">Columns</div><div>2θ (degrees), intensity, estimated standard deviation; no header line in any file</div><div class="k">Grid</div><div>Step 0.001° in every file (min = max = 0.001); 2θ from 0.008° (20 long scans) or 0.009° (81 short scans) to 26.999°</div><div class="k">Classes</div><div>20 long (26992 points, median e/y ≈ 0.040) and 81 short (26991 points, median e/y ≈ 0.047); every one of the 16 C-tagged originals is long</div><div class="k">Temperatures</div><div>25 nominal values from 900 to 1300 °C</div><div class="k">Clock</div><div>Scan 001 at 2026-06-10 18:09:48; last background at +38192 s (2026-06-11 04:46:20); 10.6 h in all</div><div class="k">Integrity</div><div>Every copy in <code>renamed/</code> is byte-identical to its original (SHA-256, checked on every run of <code>analyze.py</code>); modification times preserved</div></div>
+<h2 id="format" class="anchored">File format</h2>
+<p>Plain text, extension <code>.xye</code>, no header, three whitespace-separated columns per line:</p>
+<pre>2theta_deg   intensity   esd
+    0.008000  0.0000000      1567.0943
+    0.023000  1690.1763      412.41486
+   26.999000  82.555925      3.5181567</pre>
+<ul class="k-list">
+<li><b>2θ</b> in degrees, step 0.001° in every file, from 0.008° or 0.009° to 26.999°.</li>
+<li><b>Intensity</b> in counts after the beamline's reduction; the integral over the whole range is the same for every sample scan (F03), so the reduction normalised them.</li>
+<li><b>esd</b>, the estimated standard deviation of the intensity. Zero-intensity points at the start have a large esd: the beamstop's shadow, to about 0.02° (F08).</li>
+<li>The only differences between files in length are one point: 20 files begin at 0.008°, 81 at 0.009° (F01, F02).</li>
+</ul>
+
+<h2 id="original-names" class="anchored">The original names</h2>
+<div class="scheme">hc6528_400_4_Qu_<b>&lt;tag&gt;</b>_w0003_b0001-<b>&lt;N&gt;</b>s.xye</div>
+<div class="fields">
+<div class="k">hc6528</div><div>The ESRF proposal, HC-6528.</div>
+<div class="k">400_4</div><div>The sample (Q02).</div>
+<div class="k">Qu</div><div>A sample label; meaning to be confirmed (Q02).</div>
+<div class="k">&lt;tag&gt;</div><div>The nominal temperature as typed at the beamline, either with a C (<code>900C</code> … <code>1300C</code>) or bare (<code>1225</code> … <code>1300</code>), or <code>background_nosample</code>. Not unique: 39 files share <code>1270</code> (D3, Q03).</div>
+<div class="k">w0003</div><div>A reduction parameter, constant over the set, not identified from the files (Q04).</div>
+<div class="k">b0001</div><div>The bin width, 0.001°, which the data's step confirms.</div>
+<div class="k">&lt;N&gt;s</div><div>Seconds elapsed since the first scan. The file's modification time is 2026-06-10 18:09:48 + N for all 101 files (F06).</div>
+</div>
+
+<h2 id="naming" class="anchored">The naming scheme of the copies</h2>
+<div class="scheme">hc6528_400_4_Qu_<b>&lt;seq&gt;</b>_T<b>&lt;temp&gt;</b>C_t<b>&lt;elapsed&gt;</b>s_<b>&lt;class&gt;</b>.xye</div>
+<div class="fields">
+<div class="k">&lt;seq&gt;</div><div>001–101, the acquisition order, so that an alphabetical listing is the experiment in order.</div>
+<div class="k">T&lt;temp&gt;C</div><div>The nominal temperature, zero-padded to four digits: <code>T0900C</code>, <code>T1270C</code>. The background has <code>background_nosample</code> here.</div>
+<div class="k">t&lt;elapsed&gt;s</div><div>The elapsed seconds of the original, zero-padded to five digits: <code>t00000s</code>, <code>t16530s</code>.</div>
+<div class="k">&lt;class&gt;</div><div><code>long</code> (26992 points from 0.008°, median e/y ≈ 0.040) or <code>short</code> (26991 points from 0.009°, ≈ 0.047), read from the contents (F02).</div>
+</div>
+<p class="sub">Example: <code>hc6528_400_4_Qu_1270_w0003_b0001-16530s.xye</code> → <code>hc6528_400_4_Qu_032_T1270C_t16530s_short.xye</code>. The constant fields <code>w0003_b0001</code> and the C suffix are not in the new names; both are in <code>file_index.csv</code> and in the table below. Why this scheme and what was set aside: P09, L004, D2, D3.</p>
+
+<h2 id="table" class="anchored">The table, one row per scan</h2>
+<p class="sub">Long scans are tinted; row 085 is marked (F05). Columns: the elapsed seconds and the clock start; the gap to the next scan; the point count and the 2θ range; the exposure class; the median relative error above 2°; the integrated intensity in millions of counts; the maximum intensity above 1°; the crude peak count above 1°; the first twelve hex digits of the SHA-256 (the full hash is in <code>file_index.csv</code>).</p>
+<div class="table-wrap">
+<table class="scans caption-top">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">#</th>
+<th data-quarto-table-cell-role="th">File (new name, original name)</th>
+<th data-quarto-table-cell-role="th">Nominal T</th>
+<th data-quarto-table-cell-role="th">Elapsed s<br>
+start (clock)</th>
+<th data-quarto-table-cell-role="th">Gap to next, s</th>
+<th data-quarto-table-cell-role="th">Points<br>
+2θ range</th>
+<th data-quarto-table-cell-role="th">Class</th>
+<th data-quarto-table-cell-role="th">Median e/y<br>
+(2θ &gt; 2°)</th>
+<th data-quarto-table-cell-role="th">ΣI, 10⁶</th>
+<th data-quarto-table-cell-role="th">max I<br>
+(2θ &gt; 1°)</th>
+<th data-quarto-table-cell-role="th">Peaks<br>
+(2θ &gt; 1°)</th>
+<th data-quarto-table-cell-role="th">SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr id="s001" class="cls-long odd">
+<td class="m">001</td>
+<td><code>hc6528_400_4_Qu_001_T0900C_t00000s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_900C_w0003_b0001-0s.xye</span></td>
+<td>900 °C<br>
+<span class="m">tag <code>900C</code></span></td>
+<td class="num">0<br>
+<span class="m">18:09:48</span></td>
+<td class="num">810</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0403</td>
+<td class="num">4.637</td>
+<td class="num">612</td>
+<td class="num">2</td>
+<td class="m sha">da23a0437699…</td>
+</tr>
+<tr id="s002" class="cls-long even">
+<td class="m">002</td>
+<td><code>hc6528_400_4_Qu_002_T0925C_t00810s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_925C_w0003_b0001-810s.xye</span></td>
+<td>925 °C<br>
+<span class="m">tag <code>925C</code></span></td>
+<td class="num">810<br>
+<span class="m">18:23:18</span></td>
+<td class="num">812</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0404</td>
+<td class="num">4.598</td>
+<td class="num">633</td>
+<td class="num">6</td>
+<td class="m sha">810440305263…</td>
+</tr>
+<tr id="s003" class="cls-long odd">
+<td class="m">003</td>
+<td><code>hc6528_400_4_Qu_003_T0950C_t01622s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_950C_w0003_b0001-1622s.xye</span></td>
+<td>950 °C<br>
+<span class="m">tag <code>950C</code></span></td>
+<td class="num">1622<br>
+<span class="m">18:36:50</span></td>
+<td class="num">810</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0406</td>
+<td class="num">4.607</td>
+<td class="num">663</td>
+<td class="num">4</td>
+<td class="m sha">e2275ba0ec5f…</td>
+</tr>
+<tr id="s004" class="cls-long even">
+<td class="m">004</td>
+<td><code>hc6528_400_4_Qu_004_T0975C_t02432s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_975C_w0003_b0001-2432s.xye</span></td>
+<td>975 °C<br>
+<span class="m">tag <code>975C</code></span></td>
+<td class="num">2432<br>
+<span class="m">18:50:20</span></td>
+<td class="num">810</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0411</td>
+<td class="num">4.566</td>
+<td class="num">612</td>
+<td class="num">13</td>
+<td class="m sha">580a62701ac7…</td>
+</tr>
+<tr id="s005" class="cls-long odd">
+<td class="m">005</td>
+<td><code>hc6528_400_4_Qu_005_T1000C_t03242s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1000C_w0003_b0001-3242s.xye</span></td>
+<td>1000 °C<br>
+<span class="m">tag <code>1000C</code></span></td>
+<td class="num">3242<br>
+<span class="m">19:03:50</span></td>
+<td class="num">808</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0412</td>
+<td class="num">4.511</td>
+<td class="num">644</td>
+<td class="num">51</td>
+<td class="m sha">eb53a764b117…</td>
+</tr>
+<tr id="s006" class="cls-long even">
+<td class="m">006</td>
+<td><code>hc6528_400_4_Qu_006_T1025C_t04050s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1025C_w0003_b0001-4050s.xye</span></td>
+<td>1025 °C<br>
+<span class="m">tag <code>1025C</code></span></td>
+<td class="num">4050<br>
+<span class="m">19:17:18</span></td>
+<td class="num">812</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0405</td>
+<td class="num">4.512</td>
+<td class="num">628</td>
+<td class="num">53</td>
+<td class="m sha">a751f251cca6…</td>
+</tr>
+<tr id="s007" class="cls-long odd">
+<td class="m">007</td>
+<td><code>hc6528_400_4_Qu_007_T1050C_t04862s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1050C_w0003_b0001-4862s.xye</span></td>
+<td>1050 °C<br>
+<span class="m">tag <code>1050C</code></span></td>
+<td class="num">4862<br>
+<span class="m">19:30:50</span></td>
+<td class="num">810</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0407</td>
+<td class="num">4.500</td>
+<td class="num">675</td>
+<td class="num">50</td>
+<td class="m sha">0924ba0692de…</td>
+</tr>
+<tr id="s008" class="cls-long even">
+<td class="m">008</td>
+<td><code>hc6528_400_4_Qu_008_T1075C_t05672s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1075C_w0003_b0001-5672s.xye</span></td>
+<td>1075 °C<br>
+<span class="m">tag <code>1075C</code></span></td>
+<td class="num">5672<br>
+<span class="m">19:44:20</span></td>
+<td class="num">810</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0411</td>
+<td class="num">4.493</td>
+<td class="num">632</td>
+<td class="num">51</td>
+<td class="m sha">feb55495ac90…</td>
+</tr>
+<tr id="s009" class="cls-long odd">
+<td class="m">009</td>
+<td><code>hc6528_400_4_Qu_009_T1100C_t06482s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1100C_w0003_b0001-6482s.xye</span></td>
+<td>1100 °C<br>
+<span class="m">tag <code>1100C</code></span></td>
+<td class="num">6482<br>
+<span class="m">19:57:50</span></td>
+<td class="num">814</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0414</td>
+<td class="num">4.481</td>
+<td class="num">645</td>
+<td class="num">49</td>
+<td class="m sha">d005616e2b4d…</td>
+</tr>
+<tr id="s010" class="cls-long even">
+<td class="m">010</td>
+<td><code>hc6528_400_4_Qu_010_T1125C_t07296s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1125C_w0003_b0001-7296s.xye</span></td>
+<td>1125 °C<br>
+<span class="m">tag <code>1125C</code></span></td>
+<td class="num">7296<br>
+<span class="m">20:11:24</span></td>
+<td class="num">806</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0404</td>
+<td class="num">4.509</td>
+<td class="num">670</td>
+<td class="num">53</td>
+<td class="m sha">783a52a3e9ff…</td>
+</tr>
+<tr id="s011" class="cls-long odd">
+<td class="m">011</td>
+<td><code>hc6528_400_4_Qu_011_T1150C_t08102s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1150C_w0003_b0001-8102s.xye</span></td>
+<td>1150 °C<br>
+<span class="m">tag <code>1150C</code></span></td>
+<td class="num">8102<br>
+<span class="m">20:24:50</span></td>
+<td class="num">808</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0404</td>
+<td class="num">4.528</td>
+<td class="num">626</td>
+<td class="num">47</td>
+<td class="m sha">53b90a3b2f35…</td>
+</tr>
+<tr id="s012" class="cls-long even">
+<td class="m">012</td>
+<td><code>hc6528_400_4_Qu_012_T1175C_t08910s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1175C_w0003_b0001-8910s.xye</span></td>
+<td>1175 °C<br>
+<span class="m">tag <code>1175C</code></span></td>
+<td class="num">8910<br>
+<span class="m">20:38:18</span></td>
+<td class="num">810</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0406</td>
+<td class="num">4.536</td>
+<td class="num">625</td>
+<td class="num">46</td>
+<td class="m sha">12d2aab01b7e…</td>
+</tr>
+<tr id="s013" class="cls-long odd">
+<td class="m">013</td>
+<td><code>hc6528_400_4_Qu_013_T1200C_t09720s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1200C_w0003_b0001-9720s.xye</span></td>
+<td>1200 °C<br>
+<span class="m">tag <code>1200C</code></span></td>
+<td class="num">9720<br>
+<span class="m">20:51:48</span></td>
+<td class="num">808</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0408</td>
+<td class="num">4.551</td>
+<td class="num">614</td>
+<td class="num">45</td>
+<td class="m sha">fb5909765da1…</td>
+</tr>
+<tr id="s014" class="cls-long even">
+<td class="m">014</td>
+<td><code>hc6528_400_4_Qu_014_T1225C_t10528s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1225C_w0003_b0001-10528s.xye</span></td>
+<td>1225 °C<br>
+<span class="m">tag <code>1225C</code></span></td>
+<td class="num">10528<br>
+<span class="m">21:05:16</span></td>
+<td class="num">628</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0403</td>
+<td class="num">4.581</td>
+<td class="num">621</td>
+<td class="num">39</td>
+<td class="m sha">8c061d83070c…</td>
+</tr>
+<tr id="s015" class="cls-long odd">
+<td class="m">015</td>
+<td><code>hc6528_400_4_Qu_015_T1225C_t11156s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1225_w0003_b0001-11156s.xye</span></td>
+<td>1225 °C<br>
+<span class="m">tag <code>1225</code></span></td>
+<td class="num">11156<br>
+<span class="m">21:15:44</span></td>
+<td class="num">622</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0396</td>
+<td class="num">4.621</td>
+<td class="num">603</td>
+<td class="num">53</td>
+<td class="m sha">50f732140f38…</td>
+</tr>
+<tr id="s016" class="cls-long even">
+<td class="m">016</td>
+<td><code>hc6528_400_4_Qu_016_T1240C_t11778s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1240_w0003_b0001-11778s.xye</span></td>
+<td>1240 °C<br>
+<span class="m">tag <code>1240</code></span></td>
+<td class="num">11778<br>
+<span class="m">21:26:06</span></td>
+<td class="num">644</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0396</td>
+<td class="num">4.642</td>
+<td class="num">655</td>
+<td class="num">57</td>
+<td class="m sha">6a44a77f08f9…</td>
+</tr>
+<tr id="s017" class="cls-long odd">
+<td class="m">017</td>
+<td><code>hc6528_400_4_Qu_017_T1240C_t12422s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1240_w0003_b0001-12422s.xye</span></td>
+<td>1240 °C<br>
+<span class="m">tag <code>1240</code></span></td>
+<td class="num">12422<br>
+<span class="m">21:36:50</span></td>
+<td class="num">250</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0399</td>
+<td class="num">4.649</td>
+<td class="num">625</td>
+<td class="num">63</td>
+<td class="m sha">882eae80a6c8…</td>
+</tr>
+<tr id="s018" class="cls-short even">
+<td class="m">018</td>
+<td><code>hc6528_400_4_Qu_018_T1240C_t12672s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1240_w0003_b0001-12672s.xye</span></td>
+<td>1240 °C<br>
+<span class="m">tag <code>1240</code></span></td>
+<td class="num">12672<br>
+<span class="m">21:41:00</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0472</td>
+<td class="num">4.606</td>
+<td class="num">681</td>
+<td class="num">42</td>
+<td class="m sha">4c4427718ee2…</td>
+</tr>
+<tr id="s019" class="cls-short odd">
+<td class="m">019</td>
+<td><code>hc6528_400_4_Qu_019_T1240C_t12934s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1240_w0003_b0001-12934s.xye</span></td>
+<td>1240 °C<br>
+<span class="m">tag <code>1240</code></span></td>
+<td class="num">12934<br>
+<span class="m">21:45:22</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0473</td>
+<td class="num">4.612</td>
+<td class="num">720</td>
+<td class="num">39</td>
+<td class="m sha">73609aa5282b…</td>
+</tr>
+<tr id="s020" class="cls-short even">
+<td class="m">020</td>
+<td><code>hc6528_400_4_Qu_020_T1240C_t13196s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1240_w0003_b0001-13196s.xye</span></td>
+<td>1240 °C<br>
+<span class="m">tag <code>1240</code></span></td>
+<td class="num">13196<br>
+<span class="m">21:49:44</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0474</td>
+<td class="num">4.611</td>
+<td class="num">619</td>
+<td class="num">54</td>
+<td class="m sha">3765086d790f…</td>
+</tr>
+<tr id="s021" class="cls-short odd">
+<td class="m">021</td>
+<td><code>hc6528_400_4_Qu_021_T1240C_t13458s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1240_w0003_b0001-13458s.xye</span></td>
+<td>1240 °C<br>
+<span class="m">tag <code>1240</code></span></td>
+<td class="num">13458<br>
+<span class="m">21:54:06</span></td>
+<td class="num">274</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0476</td>
+<td class="num">4.608</td>
+<td class="num">647</td>
+<td class="num">46</td>
+<td class="m sha">a39e6dc7b41e…</td>
+</tr>
+<tr id="s022" class="cls-short even">
+<td class="m">022</td>
+<td><code>hc6528_400_4_Qu_022_T1240C_t13732s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1240_w0003_b0001-13732s.xye</span></td>
+<td>1240 °C<br>
+<span class="m">tag <code>1240</code></span></td>
+<td class="num">13732<br>
+<span class="m">21:58:40</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0477</td>
+<td class="num">4.605</td>
+<td class="num">652</td>
+<td class="num">51</td>
+<td class="m sha">141dc52a3116…</td>
+</tr>
+<tr id="s023" class="cls-short odd">
+<td class="m">023</td>
+<td><code>hc6528_400_4_Qu_023_T1245C_t13992s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1245_w0003_b0001-13992s.xye</span></td>
+<td>1245 °C<br>
+<span class="m">tag <code>1245</code></span></td>
+<td class="num">13992<br>
+<span class="m">22:03:00</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0472</td>
+<td class="num">4.605</td>
+<td class="num">644</td>
+<td class="num">48</td>
+<td class="m sha">2abbc87386fe…</td>
+</tr>
+<tr id="s024" class="cls-short even">
+<td class="m">024</td>
+<td><code>hc6528_400_4_Qu_024_T1245C_t14252s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1245_w0003_b0001-14252s.xye</span></td>
+<td>1245 °C<br>
+<span class="m">tag <code>1245</code></span></td>
+<td class="num">14252<br>
+<span class="m">22:07:20</span></td>
+<td class="num">272</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0466</td>
+<td class="num">4.624</td>
+<td class="num">602</td>
+<td class="num">47</td>
+<td class="m sha">3ceb5c510a08…</td>
+</tr>
+<tr id="s025" class="cls-short odd">
+<td class="m">025</td>
+<td><code>hc6528_400_4_Qu_025_T1245C_t14524s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1245_w0003_b0001-14524s.xye</span></td>
+<td>1245 °C<br>
+<span class="m">tag <code>1245</code></span></td>
+<td class="num">14524<br>
+<span class="m">22:11:52</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0465</td>
+<td class="num">4.627</td>
+<td class="num">633</td>
+<td class="num">52</td>
+<td class="m sha">e6c12fdfbfb9…</td>
+</tr>
+<tr id="s026" class="cls-short even">
+<td class="m">026</td>
+<td><code>hc6528_400_4_Qu_026_T1250C_t14786s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1250_w0003_b0001-14786s.xye</span></td>
+<td>1250 °C<br>
+<span class="m">tag <code>1250</code></span></td>
+<td class="num">14786<br>
+<span class="m">22:16:14</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0466</td>
+<td class="num">4.622</td>
+<td class="num">663</td>
+<td class="num">57</td>
+<td class="m sha">c2c5db987b9b…</td>
+</tr>
+<tr id="s027" class="cls-short odd">
+<td class="m">027</td>
+<td><code>hc6528_400_4_Qu_027_T1250C_t15046s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1250_w0003_b0001-15046s.xye</span></td>
+<td>1250 °C<br>
+<span class="m">tag <code>1250</code></span></td>
+<td class="num">15046<br>
+<span class="m">22:20:34</span></td>
+<td class="num">264</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0467</td>
+<td class="num">4.632</td>
+<td class="num">626</td>
+<td class="num">53</td>
+<td class="m sha">b737b15a0112…</td>
+</tr>
+<tr id="s028" class="cls-short even">
+<td class="m">028</td>
+<td><code>hc6528_400_4_Qu_028_T1250C_t15310s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1250_w0003_b0001-15310s.xye</span></td>
+<td>1250 °C<br>
+<span class="m">tag <code>1250</code></span></td>
+<td class="num">15310<br>
+<span class="m">22:24:58</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0467</td>
+<td class="num">4.637</td>
+<td class="num">630</td>
+<td class="num">54</td>
+<td class="m sha">375a4a91cfc8…</td>
+</tr>
+<tr id="s029" class="cls-short odd">
+<td class="m">029</td>
+<td><code>hc6528_400_4_Qu_029_T1250C_t15570s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1250_w0003_b0001-15570s.xye</span></td>
+<td>1250 °C<br>
+<span class="m">tag <code>1250</code></span></td>
+<td class="num">15570<br>
+<span class="m">22:29:18</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0468</td>
+<td class="num">4.635</td>
+<td class="num">641</td>
+<td class="num">51</td>
+<td class="m sha">d5e08cda27b2…</td>
+</tr>
+<tr id="s030" class="cls-short even">
+<td class="m">030</td>
+<td><code>hc6528_400_4_Qu_030_T1250C_t15832s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1250_w0003_b0001-15832s.xye</span></td>
+<td>1250 °C<br>
+<span class="m">tag <code>1250</code></span></td>
+<td class="num">15832<br>
+<span class="m">22:33:40</span></td>
+<td class="num">436</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0470</td>
+<td class="num">4.631</td>
+<td class="num">716</td>
+<td class="num">56</td>
+<td class="m sha">8d69a60bae01…</td>
+</tr>
+<tr id="s031" class="cls-short odd">
+<td class="m">031</td>
+<td><code>hc6528_400_4_Qu_031_T1266C_t16268s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1266_w0003_b0001-16268s.xye</span></td>
+<td>1266 °C<br>
+<span class="m">tag <code>1266</code></span></td>
+<td class="num">16268<br>
+<span class="m">22:40:56</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0471</td>
+<td class="num">4.627</td>
+<td class="num">636</td>
+<td class="num">58</td>
+<td class="m sha">a7d693dea340…</td>
+</tr>
+<tr id="s032" class="cls-short even">
+<td class="m">032</td>
+<td><code>hc6528_400_4_Qu_032_T1270C_t16530s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-16530s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">16530<br>
+<span class="m">22:45:18</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0472</td>
+<td class="num">4.626</td>
+<td class="num">632</td>
+<td class="num">54</td>
+<td class="m sha">0ad753a961da…</td>
+</tr>
+<tr id="s033" class="cls-short odd">
+<td class="m">033</td>
+<td><code>hc6528_400_4_Qu_033_T1270C_t16792s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-16792s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">16792<br>
+<span class="m">22:49:40</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0473</td>
+<td class="num">4.629</td>
+<td class="num">619</td>
+<td class="num">60</td>
+<td class="m sha">016ed438ff7e…</td>
+</tr>
+<tr id="s034" class="cls-short even">
+<td class="m">034</td>
+<td><code>hc6528_400_4_Qu_034_T1270C_t17054s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-17054s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">17054<br>
+<span class="m">22:54:02</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0474</td>
+<td class="num">4.627</td>
+<td class="num">655</td>
+<td class="num">56</td>
+<td class="m sha">d2affed80f31…</td>
+</tr>
+<tr id="s035" class="cls-short odd">
+<td class="m">035</td>
+<td><code>hc6528_400_4_Qu_035_T1270C_t17314s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-17314s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">17314<br>
+<span class="m">22:58:22</span></td>
+<td class="num">264</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0476</td>
+<td class="num">4.632</td>
+<td class="num">652</td>
+<td class="num">54</td>
+<td class="m sha">048ff83d2634…</td>
+</tr>
+<tr id="s036" class="cls-short even">
+<td class="m">036</td>
+<td><code>hc6528_400_4_Qu_036_T1270C_t17578s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-17578s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">17578<br>
+<span class="m">23:02:46</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0471</td>
+<td class="num">4.634</td>
+<td class="num">691</td>
+<td class="num">62</td>
+<td class="m sha">c035958024a1…</td>
+</tr>
+<tr id="s037" class="cls-short odd">
+<td class="m">037</td>
+<td><code>hc6528_400_4_Qu_037_T1270C_t17838s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-17838s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">17838<br>
+<span class="m">23:07:06</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0464</td>
+<td class="num">4.650</td>
+<td class="num">636</td>
+<td class="num">74</td>
+<td class="m sha">928c7b75b1bb…</td>
+</tr>
+<tr id="s038" class="cls-short even">
+<td class="m">038</td>
+<td><code>hc6528_400_4_Qu_038_T1270C_t18100s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-18100s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">18100<br>
+<span class="m">23:11:28</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0463</td>
+<td class="num">4.661</td>
+<td class="num">628</td>
+<td class="num">74</td>
+<td class="m sha">8ae042ebba8d…</td>
+</tr>
+<tr id="s039" class="cls-short odd">
+<td class="m">039</td>
+<td><code>hc6528_400_4_Qu_039_T1270C_t18362s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-18362s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">18362<br>
+<span class="m">23:15:50</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0463</td>
+<td class="num">4.657</td>
+<td class="num">629</td>
+<td class="num">71</td>
+<td class="m sha">8a446cf2a76e…</td>
+</tr>
+<tr id="s040" class="cls-short even">
+<td class="m">040</td>
+<td><code>hc6528_400_4_Qu_040_T1270C_t18624s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-18624s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">18624<br>
+<span class="m">23:20:12</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0464</td>
+<td class="num">4.649</td>
+<td class="num">632</td>
+<td class="num">79</td>
+<td class="m sha">b40e84fe1bdb…</td>
+</tr>
+<tr id="s041" class="cls-short odd">
+<td class="m">041</td>
+<td><code>hc6528_400_4_Qu_041_T1270C_t18884s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-18884s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">18884<br>
+<span class="m">23:24:32</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0466</td>
+<td class="num">4.644</td>
+<td class="num">642</td>
+<td class="num">76</td>
+<td class="m sha">67e8fe9b8dc1…</td>
+</tr>
+<tr id="s042" class="cls-short even">
+<td class="m">042</td>
+<td><code>hc6528_400_4_Qu_042_T1270C_t19146s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-19146s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">19146<br>
+<span class="m">23:28:54</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0466</td>
+<td class="num">4.648</td>
+<td class="num">655</td>
+<td class="num">80</td>
+<td class="m sha">1692dfe92bce…</td>
+</tr>
+<tr id="s043" class="cls-short odd">
+<td class="m">043</td>
+<td><code>hc6528_400_4_Qu_043_T1270C_t19408s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-19408s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">19408<br>
+<span class="m">23:33:16</span></td>
+<td class="num">278</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0468</td>
+<td class="num">4.645</td>
+<td class="num">635</td>
+<td class="num">91</td>
+<td class="m sha">0c6675414bd0…</td>
+</tr>
+<tr id="s044" class="cls-short even">
+<td class="m">044</td>
+<td><code>hc6528_400_4_Qu_044_T1270C_t19686s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-19686s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">19686<br>
+<span class="m">23:37:54</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0469</td>
+<td class="num">4.640</td>
+<td class="num">622</td>
+<td class="num">86</td>
+<td class="m sha">54e755ca7905…</td>
+</tr>
+<tr id="s045" class="cls-short odd">
+<td class="m">045</td>
+<td><code>hc6528_400_4_Qu_045_T1270C_t19948s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-19948s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">19948<br>
+<span class="m">23:42:16</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0471</td>
+<td class="num">4.633</td>
+<td class="num">606</td>
+<td class="num">88</td>
+<td class="m sha">61bf1f94920a…</td>
+</tr>
+<tr id="s046" class="cls-short even">
+<td class="m">046</td>
+<td><code>hc6528_400_4_Qu_046_T1270C_t20210s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-20210s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">20210<br>
+<span class="m">23:46:38</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0472</td>
+<td class="num">4.633</td>
+<td class="num">656</td>
+<td class="num">86</td>
+<td class="m sha">1a26894e7776…</td>
+</tr>
+<tr id="s047" class="cls-short odd">
+<td class="m">047</td>
+<td><code>hc6528_400_4_Qu_047_T1270C_t20472s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-20472s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">20472<br>
+<span class="m">23:51:00</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0473</td>
+<td class="num">4.628</td>
+<td class="num">724</td>
+<td class="num">80</td>
+<td class="m sha">d03ee44260c8…</td>
+</tr>
+<tr id="s048" class="cls-short even">
+<td class="m">048</td>
+<td><code>hc6528_400_4_Qu_048_T1270C_t20734s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-20734s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">20734<br>
+<span class="m">23:55:22</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0474</td>
+<td class="num">4.626</td>
+<td class="num">625</td>
+<td class="num">90</td>
+<td class="m sha">07443858b9ec…</td>
+</tr>
+<tr id="s049" class="cls-short odd">
+<td class="m">049</td>
+<td><code>hc6528_400_4_Qu_049_T1270C_t20996s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-20996s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">20996<br>
+<span class="m">23:59:44</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0476</td>
+<td class="num">4.620</td>
+<td class="num">625</td>
+<td class="num">95</td>
+<td class="m sha">8bf2d06fbe0c…</td>
+</tr>
+<tr id="s050" class="cls-short even">
+<td class="m">050</td>
+<td><code>hc6528_400_4_Qu_050_T1270C_t21256s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-21256s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">21256<br>
+<span class="m">00:04:04</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0468</td>
+<td class="num">4.634</td>
+<td class="num">643</td>
+<td class="num">104</td>
+<td class="m sha">89b277c67796…</td>
+</tr>
+<tr id="s051" class="cls-short odd">
+<td class="m">051</td>
+<td><code>hc6528_400_4_Qu_051_T1270C_t21518s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-21518s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">21518<br>
+<span class="m">00:08:26</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0464</td>
+<td class="num">4.641</td>
+<td class="num">642</td>
+<td class="num">100</td>
+<td class="m sha">84500f12621c…</td>
+</tr>
+<tr id="s052" class="cls-short even">
+<td class="m">052</td>
+<td><code>hc6528_400_4_Qu_052_T1270C_t21778s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-21778s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">21778<br>
+<span class="m">00:12:46</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0464</td>
+<td class="num">4.642</td>
+<td class="num">620</td>
+<td class="num">110</td>
+<td class="m sha">cb741fd8553b…</td>
+</tr>
+<tr id="s053" class="cls-short odd">
+<td class="m">053</td>
+<td><code>hc6528_400_4_Qu_053_T1270C_t22040s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-22040s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">22040<br>
+<span class="m">00:17:08</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0464</td>
+<td class="num">4.646</td>
+<td class="num">656</td>
+<td class="num">111</td>
+<td class="m sha">35f87f71c876…</td>
+</tr>
+<tr id="s054" class="cls-short even">
+<td class="m">054</td>
+<td><code>hc6528_400_4_Qu_054_T1270C_t22300s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-22300s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">22300<br>
+<span class="m">00:21:28</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0466</td>
+<td class="num">4.640</td>
+<td class="num">645</td>
+<td class="num">104</td>
+<td class="m sha">5e67ffeeaa16…</td>
+</tr>
+<tr id="s055" class="cls-short odd">
+<td class="m">055</td>
+<td><code>hc6528_400_4_Qu_055_T1270C_t22562s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-22562s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">22562<br>
+<span class="m">00:25:50</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0466</td>
+<td class="num">4.639</td>
+<td class="num">646</td>
+<td class="num">99</td>
+<td class="m sha">1f41d693cd4e…</td>
+</tr>
+<tr id="s056" class="cls-short even">
+<td class="m">056</td>
+<td><code>hc6528_400_4_Qu_056_T1270C_t22824s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-22824s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">22824<br>
+<span class="m">00:30:12</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0468</td>
+<td class="num">4.631</td>
+<td class="num">677</td>
+<td class="num">102</td>
+<td class="m sha">32cf0823e5cb…</td>
+</tr>
+<tr id="s057" class="cls-short odd">
+<td class="m">057</td>
+<td><code>hc6528_400_4_Qu_057_T1270C_t23086s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-23086s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">23086<br>
+<span class="m">00:34:34</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0470</td>
+<td class="num">4.633</td>
+<td class="num">670</td>
+<td class="num">106</td>
+<td class="m sha">f570ca2061af…</td>
+</tr>
+<tr id="s058" class="cls-short even">
+<td class="m">058</td>
+<td><code>hc6528_400_4_Qu_058_T1270C_t23346s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-23346s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">23346<br>
+<span class="m">00:38:54</span></td>
+<td class="num">264</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0471</td>
+<td class="num">4.634</td>
+<td class="num">709</td>
+<td class="num">111</td>
+<td class="m sha">f513f0d6a605…</td>
+</tr>
+<tr id="s059" class="cls-short odd">
+<td class="m">059</td>
+<td><code>hc6528_400_4_Qu_059_T1270C_t23610s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-23610s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">23610<br>
+<span class="m">00:43:18</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0472</td>
+<td class="num">4.629</td>
+<td class="num">678</td>
+<td class="num">114</td>
+<td class="m sha">1b42bf976b6e…</td>
+</tr>
+<tr id="s060" class="cls-short even">
+<td class="m">060</td>
+<td><code>hc6528_400_4_Qu_060_T1270C_t23870s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-23870s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">23870<br>
+<span class="m">00:47:38</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0474</td>
+<td class="num">4.618</td>
+<td class="num">703</td>
+<td class="num">112</td>
+<td class="m sha">b332f1db7806…</td>
+</tr>
+<tr id="s061" class="cls-short odd">
+<td class="m">061</td>
+<td><code>hc6528_400_4_Qu_061_T1270C_t24132s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-24132s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">24132<br>
+<span class="m">00:52:00</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0475</td>
+<td class="num">4.618</td>
+<td class="num">742</td>
+<td class="num">115</td>
+<td class="m sha">f2617d330e66…</td>
+</tr>
+<tr id="s062" class="cls-short even">
+<td class="m">062</td>
+<td><code>hc6528_400_4_Qu_062_T1270C_t24394s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-24394s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">24394<br>
+<span class="m">00:56:22</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0476</td>
+<td class="num">4.609</td>
+<td class="num">748</td>
+<td class="num">122</td>
+<td class="m sha">4c52b39651b6…</td>
+</tr>
+<tr id="s063" class="cls-short odd">
+<td class="m">063</td>
+<td><code>hc6528_400_4_Qu_063_T1270C_t24656s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-24656s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">24656<br>
+<span class="m">01:00:44</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0477</td>
+<td class="num">4.614</td>
+<td class="num">790</td>
+<td class="num">120</td>
+<td class="m sha">d8bd11f93123…</td>
+</tr>
+<tr id="s064" class="cls-short even">
+<td class="m">064</td>
+<td><code>hc6528_400_4_Qu_064_T1270C_t24918s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-24918s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">24918<br>
+<span class="m">01:05:06</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0467</td>
+<td class="num">4.622</td>
+<td class="num">834</td>
+<td class="num">122</td>
+<td class="m sha">61fa207f2256…</td>
+</tr>
+<tr id="s065" class="cls-short odd">
+<td class="m">065</td>
+<td><code>hc6528_400_4_Qu_065_T1270C_t25180s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-25180s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">25180<br>
+<span class="m">01:09:28</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0466</td>
+<td class="num">4.630</td>
+<td class="num">803</td>
+<td class="num">118</td>
+<td class="m sha">ba950a9f78ea…</td>
+</tr>
+<tr id="s066" class="cls-short even">
+<td class="m">066</td>
+<td><code>hc6528_400_4_Qu_066_T1270C_t25442s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-25442s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">25442<br>
+<span class="m">01:13:50</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0466</td>
+<td class="num">4.629</td>
+<td class="num">870</td>
+<td class="num">135</td>
+<td class="m sha">d8a5f2b4da81…</td>
+</tr>
+<tr id="s067" class="cls-short odd">
+<td class="m">067</td>
+<td><code>hc6528_400_4_Qu_067_T1270C_t25704s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-25704s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">25704<br>
+<span class="m">01:18:12</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0467</td>
+<td class="num">4.625</td>
+<td class="num">878</td>
+<td class="num">128</td>
+<td class="m sha">fbcbdfc493a9…</td>
+</tr>
+<tr id="s068" class="cls-short even">
+<td class="m">068</td>
+<td><code>hc6528_400_4_Qu_068_T1270C_t25964s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-25964s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">25964<br>
+<span class="m">01:22:32</span></td>
+<td class="num">264</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0468</td>
+<td class="num">4.630</td>
+<td class="num">886</td>
+<td class="num">125</td>
+<td class="m sha">97df89646a1e…</td>
+</tr>
+<tr id="s069" class="cls-short odd">
+<td class="m">069</td>
+<td><code>hc6528_400_4_Qu_069_T1270C_t26228s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-26228s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">26228<br>
+<span class="m">01:26:56</span></td>
+<td class="num">288</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0469</td>
+<td class="num">4.621</td>
+<td class="num">935</td>
+<td class="num">147</td>
+<td class="m sha">bff295e3a7da…</td>
+</tr>
+<tr id="s070" class="cls-short even">
+<td class="m">070</td>
+<td><code>hc6528_400_4_Qu_070_T1270C_t26516s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1270_w0003_b0001-26516s.xye</span></td>
+<td>1270 °C<br>
+<span class="m">tag <code>1270</code></span></td>
+<td class="num">26516<br>
+<span class="m">01:31:44</span></td>
+<td class="num">290</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0471</td>
+<td class="num">4.616</td>
+<td class="num">986</td>
+<td class="num">138</td>
+<td class="m sha">566aefb83da0…</td>
+</tr>
+<tr id="s071" class="cls-short odd">
+<td class="m">071</td>
+<td><code>hc6528_400_4_Qu_071_T1272C_t26806s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1272_w0003_b0001-26806s.xye</span></td>
+<td>1272 °C<br>
+<span class="m">tag <code>1272</code></span></td>
+<td class="num">26806<br>
+<span class="m">01:36:34</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0473</td>
+<td class="num">4.613</td>
+<td class="num">992</td>
+<td class="num">142</td>
+<td class="m sha">814bd17b5fda…</td>
+</tr>
+<tr id="s072" class="cls-short even">
+<td class="m">072</td>
+<td><code>hc6528_400_4_Qu_072_T1275C_t27066s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1275_w0003_b0001-27066s.xye</span></td>
+<td>1275 °C<br>
+<span class="m">tag <code>1275</code></span></td>
+<td class="num">27066<br>
+<span class="m">01:40:54</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0474</td>
+<td class="num">4.603</td>
+<td class="num">1026</td>
+<td class="num">146</td>
+<td class="m sha">08dc60ceac38…</td>
+</tr>
+<tr id="s073" class="cls-short odd">
+<td class="m">073</td>
+<td><code>hc6528_400_4_Qu_073_T1275C_t27328s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1275_w0003_b0001-27328s.xye</span></td>
+<td>1275 °C<br>
+<span class="m">tag <code>1275</code></span></td>
+<td class="num">27328<br>
+<span class="m">01:45:16</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0476</td>
+<td class="num">4.608</td>
+<td class="num">1046</td>
+<td class="num">166</td>
+<td class="m sha">388da7e725f2…</td>
+</tr>
+<tr id="s074" class="cls-short even">
+<td class="m">074</td>
+<td><code>hc6528_400_4_Qu_074_T1275C_t27590s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1275_w0003_b0001-27590s.xye</span></td>
+<td>1275 °C<br>
+<span class="m">tag <code>1275</code></span></td>
+<td class="num">27590<br>
+<span class="m">01:49:38</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0478</td>
+<td class="num">4.602</td>
+<td class="num">1033</td>
+<td class="num">155</td>
+<td class="m sha">60b1ad3745f7…</td>
+</tr>
+<tr id="s075" class="cls-short odd">
+<td class="m">075</td>
+<td><code>hc6528_400_4_Qu_075_T1275C_t27850s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1275_w0003_b0001-27850s.xye</span></td>
+<td>1275 °C<br>
+<span class="m">tag <code>1275</code></span></td>
+<td class="num">27850<br>
+<span class="m">01:53:58</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0479</td>
+<td class="num">4.601</td>
+<td class="num">1163</td>
+<td class="num">156</td>
+<td class="m sha">85c249b5514b…</td>
+</tr>
+<tr id="s076" class="cls-short even">
+<td class="m">076</td>
+<td><code>hc6528_400_4_Qu_076_T1275C_t28110s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1275_w0003_b0001-28110s.xye</span></td>
+<td>1275 °C<br>
+<span class="m">tag <code>1275</code></span></td>
+<td class="num">28110<br>
+<span class="m">01:58:18</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0481</td>
+<td class="num">4.594</td>
+<td class="num">1182</td>
+<td class="num">168</td>
+<td class="m sha">7415c5bf34cd…</td>
+</tr>
+<tr id="s077" class="cls-short odd">
+<td class="m">077</td>
+<td><code>hc6528_400_4_Qu_077_T1275C_t28372s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1275_w0003_b0001-28372s.xye</span></td>
+<td>1275 °C<br>
+<span class="m">tag <code>1275</code></span></td>
+<td class="num">28372<br>
+<span class="m">02:02:40</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0476</td>
+<td class="num">4.599</td>
+<td class="num">1279</td>
+<td class="num">182</td>
+<td class="m sha">34e16e56c55a…</td>
+</tr>
+<tr id="s078" class="cls-short even">
+<td class="m">078</td>
+<td><code>hc6528_400_4_Qu_078_T1275C_t28634s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1275_w0003_b0001-28634s.xye</span></td>
+<td>1275 °C<br>
+<span class="m">tag <code>1275</code></span></td>
+<td class="num">28634<br>
+<span class="m">02:07:02</span></td>
+<td class="num">270</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0470</td>
+<td class="num">4.614</td>
+<td class="num">1259</td>
+<td class="num">166</td>
+<td class="m sha">bbe1f434b8b3…</td>
+</tr>
+<tr id="s079" class="cls-short odd">
+<td class="m">079</td>
+<td><code>hc6528_400_4_Qu_079_T1275C_t28904s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1275_w0003_b0001-28904s.xye</span></td>
+<td>1275 °C<br>
+<span class="m">tag <code>1275</code></span></td>
+<td class="num">28904<br>
+<span class="m">02:11:32</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0470</td>
+<td class="num">4.611</td>
+<td class="num">1244</td>
+<td class="num">190</td>
+<td class="m sha">4a69442a737b…</td>
+</tr>
+<tr id="s080" class="cls-short even">
+<td class="m">080</td>
+<td><code>hc6528_400_4_Qu_080_T1280C_t29164s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1280_w0003_b0001-29164s.xye</span></td>
+<td>1280 °C<br>
+<span class="m">tag <code>1280</code></span></td>
+<td class="num">29164<br>
+<span class="m">02:15:52</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0470</td>
+<td class="num">4.610</td>
+<td class="num">1269</td>
+<td class="num">178</td>
+<td class="m sha">de562404f2f5…</td>
+</tr>
+<tr id="s081" class="cls-short odd">
+<td class="m">081</td>
+<td><code>hc6528_400_4_Qu_081_T1280C_t29426s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1280_w0003_b0001-29426s.xye</span></td>
+<td>1280 °C<br>
+<span class="m">tag <code>1280</code></span></td>
+<td class="num">29426<br>
+<span class="m">02:20:14</span></td>
+<td class="num">266</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0471</td>
+<td class="num">4.607</td>
+<td class="num">1422</td>
+<td class="num">201</td>
+<td class="m sha">f97488e29b0c…</td>
+</tr>
+<tr id="s082" class="cls-short even">
+<td class="m">082</td>
+<td><code>hc6528_400_4_Qu_082_T1280C_t29692s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1280_w0003_b0001-29692s.xye</span></td>
+<td>1280 °C<br>
+<span class="m">tag <code>1280</code></span></td>
+<td class="num">29692<br>
+<span class="m">02:24:40</span></td>
+<td class="num">258</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0473</td>
+<td class="num">4.597</td>
+<td class="num">1384</td>
+<td class="num">182</td>
+<td class="m sha">04e0889c7ab6…</td>
+</tr>
+<tr id="s083" class="cls-short odd">
+<td class="m">083</td>
+<td><code>hc6528_400_4_Qu_083_T1280C_t29950s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1280_w0003_b0001-29950s.xye</span></td>
+<td>1280 °C<br>
+<span class="m">tag <code>1280</code></span></td>
+<td class="num">29950<br>
+<span class="m">02:28:58</span></td>
+<td class="num">776</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0474</td>
+<td class="num">4.598</td>
+<td class="num">1480</td>
+<td class="num">210</td>
+<td class="m sha">204b5996a04e…</td>
+</tr>
+<tr id="s084" class="cls-long even">
+<td class="m">084</td>
+<td><code>hc6528_400_4_Qu_084_T1290C_t30726s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1290C_w0003_b0001-30726s.xye</span></td>
+<td>1290 °C<br>
+<span class="m">tag <code>1290C</code></span></td>
+<td class="num">30726<br>
+<span class="m">02:41:54</span></td>
+<td class="num">904</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0404</td>
+<td class="num">4.623</td>
+<td class="num">1422</td>
+<td class="num">227</td>
+<td class="m sha">9e2216365370…</td>
+</tr>
+<tr id="s085" class="cls-short anomaly odd">
+<td class="m">085</td>
+<td><code>hc6528_400_4_Qu_085_T1290C_t31630s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1290_w0003_b0001-31630s.xye</span></td>
+<td>1290 °C<br>
+<span class="m">tag <code>1290</code></span></td>
+<td class="num">31630<br>
+<span class="m">02:56:58</span></td>
+<td class="num">458</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0661</td>
+<td class="num">4.639</td>
+<td class="num">1689</td>
+<td class="num">160</td>
+<td class="m sha">96f414128668…</td>
+</tr>
+<tr id="s086" class="cls-short even">
+<td class="m">086</td>
+<td><code>hc6528_400_4_Qu_086_T1299C_t32088s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1299_w0003_b0001-32088s.xye</span></td>
+<td>1299 °C<br>
+<span class="m">tag <code>1299</code></span></td>
+<td class="num">32088<br>
+<span class="m">03:04:36</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0475</td>
+<td class="num">4.608</td>
+<td class="num">1779</td>
+<td class="num">228</td>
+<td class="m sha">128b191bc935…</td>
+</tr>
+<tr id="s087" class="cls-short odd">
+<td class="m">087</td>
+<td><code>hc6528_400_4_Qu_087_T1300C_t32348s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-32348s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">32348<br>
+<span class="m">03:08:56</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0473</td>
+<td class="num">4.612</td>
+<td class="num">1808</td>
+<td class="num">230</td>
+<td class="m sha">4b59f2504218…</td>
+</tr>
+<tr id="s088" class="cls-short even">
+<td class="m">088</td>
+<td><code>hc6528_400_4_Qu_088_T1300C_t32610s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-32610s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">32610<br>
+<span class="m">03:13:18</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0474</td>
+<td class="num">4.610</td>
+<td class="num">2011</td>
+<td class="num">238</td>
+<td class="m sha">fe3ab3aca797…</td>
+</tr>
+<tr id="s089" class="cls-short odd">
+<td class="m">089</td>
+<td><code>hc6528_400_4_Qu_089_T1300C_t32872s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-32872s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">32872<br>
+<span class="m">03:17:40</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0475</td>
+<td class="num">4.604</td>
+<td class="num">2022</td>
+<td class="num">250</td>
+<td class="m sha">0088bc588d7f…</td>
+</tr>
+<tr id="s090" class="cls-short even">
+<td class="m">090</td>
+<td><code>hc6528_400_4_Qu_090_T1300C_t33132s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-33132s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">33132<br>
+<span class="m">03:22:00</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0476</td>
+<td class="num">4.610</td>
+<td class="num">2159</td>
+<td class="num">259</td>
+<td class="m sha">8281ee3a04c2…</td>
+</tr>
+<tr id="s091" class="cls-short odd">
+<td class="m">091</td>
+<td><code>hc6528_400_4_Qu_091_T1300C_t33394s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-33394s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">33394<br>
+<span class="m">03:26:22</span></td>
+<td class="num">264</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0478</td>
+<td class="num">4.611</td>
+<td class="num">2265</td>
+<td class="num">249</td>
+<td class="m sha">bdc3de4b5b6e…</td>
+</tr>
+<tr id="s092" class="cls-short even">
+<td class="m">092</td>
+<td><code>hc6528_400_4_Qu_092_T1300C_t33658s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-33658s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">33658<br>
+<span class="m">03:30:46</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0479</td>
+<td class="num">4.601</td>
+<td class="num">2161</td>
+<td class="num">277</td>
+<td class="m sha">747c5a361dbf…</td>
+</tr>
+<tr id="s093" class="cls-short odd">
+<td class="m">093</td>
+<td><code>hc6528_400_4_Qu_093_T1300C_t33920s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-33920s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">33920<br>
+<span class="m">03:35:08</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0481</td>
+<td class="num">4.598</td>
+<td class="num">2358</td>
+<td class="num">279</td>
+<td class="m sha">5d81d8954ae5…</td>
+</tr>
+<tr id="s094" class="cls-short even">
+<td class="m">094</td>
+<td><code>hc6528_400_4_Qu_094_T1300C_t34182s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-34182s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">34182<br>
+<span class="m">03:39:30</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0483</td>
+<td class="num">4.595</td>
+<td class="num">2353</td>
+<td class="num">274</td>
+<td class="m sha">62c82f99d45a…</td>
+</tr>
+<tr id="s095" class="cls-short odd">
+<td class="m">095</td>
+<td><code>hc6528_400_4_Qu_095_T1300C_t34444s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-34444s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">34444<br>
+<span class="m">03:43:52</span></td>
+<td class="num">260</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0484</td>
+<td class="num">4.595</td>
+<td class="num">2469</td>
+<td class="num">262</td>
+<td class="m sha">ff4af98e24e8…</td>
+</tr>
+<tr id="s096" class="cls-short even">
+<td class="m">096</td>
+<td><code>hc6528_400_4_Qu_096_T1300C_t34704s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-34704s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">34704<br>
+<span class="m">03:48:12</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0487</td>
+<td class="num">4.592</td>
+<td class="num">2516</td>
+<td class="num">273</td>
+<td class="m sha">d5a866876dc8…</td>
+</tr>
+<tr id="s097" class="cls-short odd">
+<td class="m">097</td>
+<td><code>hc6528_400_4_Qu_097_T1300C_t34966s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-34966s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">34966<br>
+<span class="m">03:52:34</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0487</td>
+<td class="num">4.595</td>
+<td class="num">2533</td>
+<td class="num">300</td>
+<td class="m sha">b620206fa4cb…</td>
+</tr>
+<tr id="s098" class="cls-short even">
+<td class="m">098</td>
+<td><code>hc6528_400_4_Qu_098_T1300C_t35228s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-35228s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">35228<br>
+<span class="m">03:56:56</span></td>
+<td class="num">262</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0490</td>
+<td class="num">4.588</td>
+<td class="num">2511</td>
+<td class="num">297</td>
+<td class="m sha">8c893f07f975…</td>
+</tr>
+<tr id="s099" class="cls-short odd">
+<td class="m">099</td>
+<td><code>hc6528_400_4_Qu_099_T1300C_t35490s_short.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300_w0003_b0001-35490s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300</code></span></td>
+<td class="num">35490<br>
+<span class="m">04:01:18</span></td>
+<td class="num">638</td>
+<td class="num">26991<br>
+<span class="m">0.009–26.999°</span></td>
+<td><span class="status status-short">short</span></td>
+<td class="num">0.0489</td>
+<td class="num">4.590</td>
+<td class="num">2634</td>
+<td class="num">293</td>
+<td class="m sha">aab222d6856b…</td>
+</tr>
+<tr id="s100" class="cls-long even">
+<td class="m">100</td>
+<td><code>hc6528_400_4_Qu_100_T1300C_t36128s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_1300C_w0003_b0001-36128s.xye</span></td>
+<td>1300 °C<br>
+<span class="m">tag <code>1300C</code></span></td>
+<td class="num">36128<br>
+<span class="m">04:11:56</span></td>
+<td class="num">2064</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0404</td>
+<td class="num">4.642</td>
+<td class="num">2613</td>
+<td class="num">322</td>
+<td class="m sha">156508520b93…</td>
+</tr>
+<tr id="s101" class="cls-long odd">
+<td class="m">101</td>
+<td><code>hc6528_400_4_Qu_101_background_nosample_t38192s_long.xye</code><br>
+<span class="orig">hc6528_400_4_Qu_background_nosample_w0003_b0001-38192s.xye</span></td>
+<td>background, no sample<br>
+<span class="m">tag <code>background_nosample</code></span></td>
+<td class="num">38192<br>
+<span class="m">04:46:20</span></td>
+<td class="num">—</td>
+<td class="num">26992<br>
+<span class="m">0.008–26.999°</span></td>
+<td><span class="status status-long">long</span></td>
+<td class="num">0.0469</td>
+<td class="num">4.164</td>
+<td class="num">675</td>
+<td class="num">0</td>
+<td class="m sha">58674923c560…</td>
+</tr>
+</tbody>
+</table>
+</div><p class="table-note">Computed by <code>tools/analyze.py</code> on 2026-10-23 18:21 from <code>originals/</code>. Start clock = 2026-06-10 18:09:48 + elapsed, which is also every file's modification time. Peaks: local maxima more than 6 esd above a 301-point rolling median, 2θ &gt; 1°; a consistency check, not a peak search. Row 085 is marked: its relative error is far above every other scan (F05).</p>
+</div>
+
+
+<!-- Closes the reading column opened by _gen/docs-nav.html, adds the right
+     "On this page" list, and wires: current-page marking in the left nav,
+     breadcrumbs, the page TOC (from h2/h3 in the reading column) and a
+     scroll-spy. Pure DOM, no library. -->
+  </div>
+  <aside class="docs-toc"><button class="docs-fold" type="button" data-fold="toc" aria-label="Hide the page outline" title="Hide the page outline">›</button><div class="t">On this page</div><ol></ol></aside>
+</div>
+<script>
+(function () {
+  /* 0. The two side panels fold on their chevrons; the choice is remembered in this browser. */
+  var docs = document.querySelector('.docs');
+  if (docs) {
+    var store = {};
+    try { store = JSON.parse(localStorage.getItem('docs-fold') || '{}'); } catch (e) { store = {}; }
+    function apply() {
+      docs.classList.toggle('nav-folded', !!store.nav);
+      docs.classList.toggle('toc-folded', !!store.toc);
+      document.querySelectorAll('.docs-fold').forEach(function (b) {
+        var which = b.getAttribute('data-fold'), folded = !!store[which];
+        b.innerHTML = (which === 'nav') === folded ? '&rsaquo;' : '&lsaquo;';
+        var what = which === 'nav' ? 'the navigation' : 'the page outline';
+        b.title = (folded ? 'Show ' : 'Hide ') + what; b.setAttribute('aria-label', b.title);
+      });
+    }
+    document.querySelectorAll('.docs-fold').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var which = b.getAttribute('data-fold'); store[which] = !store[which];
+        try { localStorage.setItem('docs-fold', JSON.stringify(store)); } catch (e) {}
+        apply();
+      });
+    });
+    apply();
+  }
+  /* 0b. The header ribbon: mark the entry whose section holds this page. Quarto rewrites the hrefs to
+     relative paths, so folders are read from the resolved URLs; the Overview link gives the site root. */
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a'));
+    if (!links.length) return;
+    /* a served URL may end in '/' (GitHub Pages: …/about/); read it as …/about/index.html */
+    function folder(path) { if (/\/$/.test(path)) path += 'index.html'; var s = path.split('/').filter(Boolean); return s.length > 1 ? s[s.length - 2] : ''; }
+    var wm = document.querySelector('a.wordmark');            // the wordmark links to the site root
+    var root = folder((wm || links[0]).pathname);
+    var map = { rietveld: 'cases', drude: 'cases', dielectric: 'cases' };
+    function key(path) { var f = folder(path); if (f === root) return 'overview'; return map[f] || f; }
+    var here = key(location.pathname);
+    links.forEach(function (a) { a.classList.toggle('current', key(a.pathname) === here); });
+  })();
+
+  var main = document.querySelector('.docs-main');
+  var nav = document.querySelector('.docs-nav');
+  var toc = document.querySelector('.docs-toc ol');
+  if (!main || !nav || !toc) return;
+
+  /* 1. Left nav: mark the current page (and section, if the hash matches). */
+  var here = location.pathname.replace(/\/index\.html$/, '/');
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var pageLink = null, hashLink = null;
+  links.forEach(function (a) {
+    var p = a.pathname.replace(/\/index\.html$/, '/');
+    if (p !== here) return;
+    if (!a.hash && !pageLink) pageLink = a;
+    if (a.hash && a.hash === location.hash) hashLink = a;
+  });
+  var cur = hashLink || pageLink;
+  if (cur) {
+    cur.classList.add('current');
+    var det = cur.closest('details.group');
+    if (det) { det.open = true; det.classList.add('has-current'); }
+    /* Breadcrumbs: group title › page (› section). */
+    var crumbs = document.createElement('div');
+    crumbs.className = 'docs-crumbs';
+    var g = det ? det.querySelector('summary.t') : null;
+    var parts = [];
+    function push(t) { if (t && parts[parts.length - 1] !== t) parts.push(t); }
+    if (g) push(g.textContent.trim());
+    if (pageLink && pageLink !== cur) push(pageLink.textContent.trim());
+    push(cur.textContent.trim());
+    crumbs.innerHTML = parts.map(function (t, i) {
+      return (i ? '<span class="sep">›</span>' : '') + '<span>' + t.replace(/</g, '&lt;') + '</span>';
+    }).join('');
+    main.insertBefore(crumbs, main.firstChild);
+  }
+
+  /* 2. Right "On this page": h2 and h3 of the reading column. */
+  var used = {};
+  var heads = Array.prototype.slice.call(main.querySelectorAll('h2, h3')).filter(function (h) {
+    if (h.closest('.site-foot, .featured-band, .msg-grid, [data-toc="no"]')) return false;
+    if (h.classList.contains('unnumbered') || h.id === 'contenido') return false;
+    return h.textContent.trim().length > 0;
+  });
+  heads.forEach(function (h) {
+    if (!h.id) {
+      var s = h.textContent.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'sec';
+      while (used[s] || document.getElementById(s)) s += '-';
+      h.id = s;
+    }
+    used[h.id] = true;
+    var li = document.createElement('li');
+    if (h.tagName === 'H3') li.className = 'l3';
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    /* This runs before KaTeX has rendered the headings, so a heading with mathematics still holds TeX
+       source: copy its markup, including the math spans, and let the page's KaTeX pass render the copy. */
+    var copy = h.cloneNode(true);
+    copy.querySelectorAll('.katex-mathml, annotation, .anchorjs-link').forEach(function (n) { n.remove(); });
+    var label = copy.textContent.trim().replace(/\s+/g, ' ');
+    if (copy.querySelector('.math, .math-done, .katex')) a.innerHTML = copy.innerHTML.trim();
+    else a.textContent = label.length > 72 ? label.slice(0, 70).replace(/[\s,;:]+\S*$/, '') + '…' : label;
+    a.title = label;
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+  if (!heads.length) { document.querySelector('.docs-toc').hidden = true; return; }
+
+  /* 3. Scroll-spy. */
+  var items = Array.prototype.slice.call(toc.querySelectorAll('a'));
+  function spy() {
+    var y = window.scrollY + 120, best = null;
+    heads.forEach(function (h) { if (h.getBoundingClientRect().top + window.scrollY <= y) best = h; });
+    items.forEach(function (a) { a.classList.toggle('current', best && a.getAttribute('href') === '#' + best.id); });
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  window.addEventListener('hashchange', spy);
+  spy();
+})();
+</script>
+<footer class="site-foot">
+  <div class="site-foot__inner">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <h4 class="anchored">What this is</h4>
+        <p>The working site of the ESRF ID22 measurements proposed by Irene Urcelay-Olabarria (proposal HC-6528, sample 400_4), taken by Irene, Iñigo González de Arrieta and Mireia Sainz-Menchón: 101 powder diffraction scans from 900 to 1300 °C kept exactly as received, copied under names that say what they are, the figures of their evolution, and everything the team needs to interpret them, logged step by step. Josu M. Igartua treats the data.</p>
+        <div class="cite-block">Irene Urcelay-Olabarria (proposer) · Iñigo González de Arrieta &amp; Mireia Sainz-Menchón (experimental team, with Irene) · Josu M. Igartua (data treatment)<br>thermomat, Fisika Saila, EHU</div>
+      </div>
+      <div><h4 class="anchored">This site</h4><ul>
+        <li><a href="../index.html">Overview</a></li><li><a href="../brief/index.html">Brief</a></li><li><a href="../protocol/index.html">Protocol</a></li><li><a href="../data/index.html">Data</a></li><li><a href="../timeline/index.html">Timeline</a></li><li><a href="../figures/index.html">Figures</a></li><li><a href="../findings/index.html">Findings</a></li><li><a href="../ideas/index.html">Ideas</a></li><li><a href="../questions/index.html">Questions</a></li><li><a href="../decisions/index.html">Decisions</a></li><li><a href="../roadmap/index.html">Roadmap</a></li><li><a href="../about/index.html">Method</a></li><li><a href="../log/index.html">Log</a></li><li><a href="../benchmark/index.html">Benchmark</a></li></ul></div>
+      <div><h4 class="anchored">The group</h4><ul>
+        <li><a href="https://www.thermomat.eus">thermomat.eus</a></li>
+        <li><a href="https://www.ehu.eus">EHU</a></li>
+        <li><a href="https://www.esrf.fr">ESRF</a></li></ul></div>
+      <div><h4 class="anchored">Status</h4><ul>
+        <li>Phase 0, extraction: closed</li>
+        <li>Phase 1, the figures: projections done (L010); the app next (I12)</li>
+        <li>Published for the team at <a href="https://jmigartua.github.io/esrf-hc6528-400-4/">jmigartua.github.io/esrf-hc6528-400-4</a>; not indexed (L015)</li>
+        <li>Rebuilt from <code>data/*</code> on every render</li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 thermomat research group · unpublished measurements · work in progress</span>
+      <span>Quarto · family design kit</span>
+    </div>
+  </div>
+</footer>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
