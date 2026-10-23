@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Downloads · ESRF hc6528 · 400_4 – ESRF hc6528 · 400_4 · in-situ powder diffraction</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html-afe927e19676d0e50b1726048be49fb1.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- The site is for the team while the measurements are unpublished: anyone with the link reads it, search engines do not list it. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<!-- KaTeX auto-render: publication titles carry TeX inside generated HTML that
+     Quarto's own math pipeline never sees (same approach as thermomat). -->
+<script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script>
+/* The header ribbon is sticky; the side columns and anchor targets need its height. */
+(function () {
+  function headH() {
+    var t = document.querySelector(".topline"), h = document.querySelector(".site-head");
+    var px = (t ? t.offsetHeight : 0) + (h ? h.offsetHeight : 0);
+    if (px) document.documentElement.style.setProperty("--head-h", px + "px");
+  }
+  document.addEventListener("DOMContentLoaded", headH);
+  window.addEventListener("load", headH);
+  window.addEventListener("resize", headH);
+})();
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }, { left: "\\(", right: "\\)", display: false }],
+      throwOnError: false
+    });
+  }
+  /* Quarto's KaTeX pipeline writes <span class="math inline">TeX</span> without delimiters and renders
+     them in a loop that reads firstChild.data; that loop dies at the first span the auto-render above
+     has already turned into KaTeX markup, leaving every later formula raw. Render the rest here. */
+  if (window.katex) {
+    document.querySelectorAll(".math").forEach(function (el) {
+      if (!el.querySelector(".katex")) {
+        var t = el.textContent.replace(/^\s*\\[\(\[]/, "").replace(/\\[\)\]]\s*$/, "");
+        try { katex.render(t, el, { displayMode: el.classList.contains("display"), throwOnError: false }); } catch (e) {}
+      }
+      /* Quarto's loop would still visit this span and wipe it (firstChild is now an element, not text):
+         take it out of its sight. No stylesheet of the site depends on the class; KaTeX's own output carries the layout. */
+      el.classList.remove("math"); el.classList.add("math-done");
+    });
+  }
+});
+</script>
+
+
+<link rel="stylesheet" href="../assets/styles/theme.css">
+<link rel="stylesheet" href="../assets/styles/site.css">
+<link rel="stylesheet" href="../assets/styles/project.css">
+</head>
+
+<body>
+
+<!-- The public edition's header (tools/sibling.py copies it over the project site's). -->
+<div class="topline"></div>
+<header class="site-head">
+  <div class="site-head__inner">
+    <a href="../index.html" class="wordmark">ESRF hc6528 <span class="accent">· 400_4</span>
+      <span class="wordmark-sub">in-situ powder diffraction at ESRF ID22, 900 → 1300 °C · the files, the extraction, the figures · thermomat, Fisika Saila, EHU</span>
+    </a>
+    <!-- tools/sibling.py writes one entry per group of the public navigation in place of the marker. -->
+    <nav class="site-nav">
+      <a href="../index.html">Overview</a>
+      <a href="../protocol/index.html">Protocol</a>
+      <a href="../data/index.html">Data</a>
+      <a href="../timeline/index.html">Timeline</a>
+      <a href="../figures/index.html">Figures</a>
+      <a href="../downloads/index.html">Downloads</a>
+      <a href="../findings/index.html">Findings</a>
+    </nav>
+  </div>
+</header>
+<!-- generated by tools/sibling.py public: the left navigation -->
+<div class="docs">
+<nav class="docs-nav" aria-label="Site sections">
+<button class="docs-fold" type="button" data-fold="nav" aria-label="Hide the navigation" title="Hide the navigation">‹</button>
+<details class="group" open=""><summary class="t">Overview</summary><ul><li><a href="../index.html">Overview</a></li></ul></details>
+<details class="group" open=""><summary class="t">Protocol</summary><ul><li><a href="../protocol/index.html">The extraction, step by step</a></li></ul></details>
+<details class="group" open=""><summary class="t">Data</summary><ul><li><a href="../data/index.html">The 101 files</a></li></ul></details>
+<details class="group" open=""><summary class="t">Timeline</summary><ul><li><a href="../timeline/index.html">The experiment's stages</a></li></ul></details>
+<details class="group" open=""><summary class="t">Figures</summary><ul><li><a href="../figures/index.html">How the diffractograms evolve</a></li></ul></details>
+<details class="group" open=""><summary class="t">Downloads</summary><ul><li><a href="../downloads/index.html">The data, to download</a></li></ul></details>
+<details class="group" open=""><summary class="t">Findings</summary><ul><li><a href="../findings/index.html">What the files show</a></li></ul></details>
+</nav>
+<div class="docs-main">
+
+<header id="title-block-header">
+<h1 class="title">Downloads</h1>
+
+</header>
+
+
+<div class="page-wide">
+<h1>The data, to download</h1>
+<p class="lede">The 101 scans of the series as received from ESRF ID22, under the names that say what they are, for the members of the team: all of them in one zip, each on its own, the index that maps every file to its original name and carries its checksum, and the plot sets that reproduce the figures in diff-ref-struct. Once the app's interactive map exists, anyone who installs it can open these files and explore the series.</p>
+<div class="facts"><div class="k">All the scans</div><div><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/hc6528_400_4_renamed.zip">hc6528_400_4_renamed.zip</a> · 34.1 MB · 101 files, 112 MB unpacked · SHA-256 <code class="sha">fa8afef0464d6a661f3155a37a366bc4ae9151c3267afb6b49b722c1c045a076</code></div><div class="k">The index</div><div><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/file_index.csv">file_index.csv</a>: original name → new name, nominal temperature, elapsed seconds, clock start, points, exposure class, SHA-256 of every file</div><div class="k">The summary</div><div><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/README.md">README.md</a>: layout, format, naming scheme, stages, what the data show, caveats</div><div class="k">For the app</div><div><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/hc6528_400_4_drs-sets.zip">hc6528_400_4_drs-sets.zip</a> · 21 kB · the 14 plot and publication sets of the figures, with a README on how to open them in diff-ref-struct</div><div class="k">Integrity</div><div>Every file's SHA-256 is in the index and in the table below; the zip's is above. The files are the beamline's reduced output as received, byte for byte (the Protocol says what was and was not changed).</div><div class="k">Use</div><div>Unpublished measurements of the team (Irene Urcelay-Olabarria, Iñigo González de Arrieta, Mireia Sainz-Menchón; data treatment Josu M. Igartua). For the team's work; not to be passed on or published without them.</div></div>
+<h2 id="files" class="anchored">Each file on its own</h2>
+<p class="sub">The 101 scans under their new names (the original names are in the index). Right-click to save; the browser may show a text file instead of downloading it.</p>
+<div class="table-wrap">
+<table class="scans dl caption-top">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">#</th>
+<th data-quarto-table-cell-role="th">File</th>
+<th data-quarto-table-cell-role="th">Nominal T</th>
+<th data-quarto-table-cell-role="th">Elapsed s</th>
+<th data-quarto-table-cell-role="th">Class</th>
+<th data-quarto-table-cell-role="th">MB</th>
+<th data-quarto-table-cell-role="th">SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="m">001</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_001_T0900C_t00000s_long.xye"><code>hc6528_400_4_Qu_001_T0900C_t00000s_long.xye</code></a></td>
+<td>900 °C</td>
+<td class="num">0</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">da23a0437699318f73a034015bc5cb563286ca559f7dfa2246f584d5899676b2</td>
+</tr>
+<tr class="even">
+<td class="m">002</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_002_T0925C_t00810s_long.xye"><code>hc6528_400_4_Qu_002_T0925C_t00810s_long.xye</code></a></td>
+<td>925 °C</td>
+<td class="num">810</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">8104403052637da2c72865ddc150606ca297752adfced80dcd614d6c6bd900af</td>
+</tr>
+<tr class="odd">
+<td class="m">003</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_003_T0950C_t01622s_long.xye"><code>hc6528_400_4_Qu_003_T0950C_t01622s_long.xye</code></a></td>
+<td>950 °C</td>
+<td class="num">1622</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">e2275ba0ec5f8cb72efd67d7d5371ead931453689aa3f82956662e338c727e31</td>
+</tr>
+<tr class="even">
+<td class="m">004</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_004_T0975C_t02432s_long.xye"><code>hc6528_400_4_Qu_004_T0975C_t02432s_long.xye</code></a></td>
+<td>975 °C</td>
+<td class="num">2432</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">580a62701ac7104c0c12681891da78f8867dd07cb95084ac214ad2e21d705008</td>
+</tr>
+<tr class="odd">
+<td class="m">005</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_005_T1000C_t03242s_long.xye"><code>hc6528_400_4_Qu_005_T1000C_t03242s_long.xye</code></a></td>
+<td>1000 °C</td>
+<td class="num">3242</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">eb53a764b11718451e75a955a3ec39ad968bb321543dcd51d98251f15455a26a</td>
+</tr>
+<tr class="even">
+<td class="m">006</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_006_T1025C_t04050s_long.xye"><code>hc6528_400_4_Qu_006_T1025C_t04050s_long.xye</code></a></td>
+<td>1025 °C</td>
+<td class="num">4050</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">a751f251cca6072b0088f768ad473a9be442b0a9c6f68345f48df1cef080b9d3</td>
+</tr>
+<tr class="odd">
+<td class="m">007</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_007_T1050C_t04862s_long.xye"><code>hc6528_400_4_Qu_007_T1050C_t04862s_long.xye</code></a></td>
+<td>1050 °C</td>
+<td class="num">4862</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">0924ba0692dec38416d0ac0b24afd2aba632cf33eb2e61fc9770f1298e9bf035</td>
+</tr>
+<tr class="even">
+<td class="m">008</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_008_T1075C_t05672s_long.xye"><code>hc6528_400_4_Qu_008_T1075C_t05672s_long.xye</code></a></td>
+<td>1075 °C</td>
+<td class="num">5672</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">feb55495ac90a8cf478e4a1a977af20fd8d4ba2cd50d83d79e5813c833cb6b73</td>
+</tr>
+<tr class="odd">
+<td class="m">009</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_009_T1100C_t06482s_long.xye"><code>hc6528_400_4_Qu_009_T1100C_t06482s_long.xye</code></a></td>
+<td>1100 °C</td>
+<td class="num">6482</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">d005616e2b4d5587714cdbdedb4c92920f6d7e7b23667649fef81386856edf1d</td>
+</tr>
+<tr class="even">
+<td class="m">010</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_010_T1125C_t07296s_long.xye"><code>hc6528_400_4_Qu_010_T1125C_t07296s_long.xye</code></a></td>
+<td>1125 °C</td>
+<td class="num">7296</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">783a52a3e9ff5a019aec53f7a9aadcbdaf54e20672b195aa8c8e006d442e9fb4</td>
+</tr>
+<tr class="odd">
+<td class="m">011</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_011_T1150C_t08102s_long.xye"><code>hc6528_400_4_Qu_011_T1150C_t08102s_long.xye</code></a></td>
+<td>1150 °C</td>
+<td class="num">8102</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">53b90a3b2f3520e8c1edeeeec08f39bbcef36ae364f2946efae7088cc2a62dd2</td>
+</tr>
+<tr class="even">
+<td class="m">012</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_012_T1175C_t08910s_long.xye"><code>hc6528_400_4_Qu_012_T1175C_t08910s_long.xye</code></a></td>
+<td>1175 °C</td>
+<td class="num">8910</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">12d2aab01b7ece99f84e3b21905834e18e37df3b00f6630a29769dee0b7c4183</td>
+</tr>
+<tr class="odd">
+<td class="m">013</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_013_T1200C_t09720s_long.xye"><code>hc6528_400_4_Qu_013_T1200C_t09720s_long.xye</code></a></td>
+<td>1200 °C</td>
+<td class="num">9720</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">fb5909765da1815fb118373ed049aa4058ebba81aee46d2a722b1e8acddc6e86</td>
+</tr>
+<tr class="even">
+<td class="m">014</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_014_T1225C_t10528s_long.xye"><code>hc6528_400_4_Qu_014_T1225C_t10528s_long.xye</code></a></td>
+<td>1225 °C</td>
+<td class="num">10528</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">8c061d83070c787b5f99559c52a39bd363c2b8eff978329805aeaed480d34167</td>
+</tr>
+<tr class="odd">
+<td class="m">015</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_015_T1225C_t11156s_long.xye"><code>hc6528_400_4_Qu_015_T1225C_t11156s_long.xye</code></a></td>
+<td>1225 °C</td>
+<td class="num">11156</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">50f732140f388cafec47b228576a50a967ad182e979a6d0a960fbb3a89bebf29</td>
+</tr>
+<tr class="even">
+<td class="m">016</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_016_T1240C_t11778s_long.xye"><code>hc6528_400_4_Qu_016_T1240C_t11778s_long.xye</code></a></td>
+<td>1240 °C</td>
+<td class="num">11778</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">6a44a77f08f9147a6e55c942fe183b81a0f52cc828a0b9e92025e97c30cc2a8d</td>
+</tr>
+<tr class="odd">
+<td class="m">017</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_017_T1240C_t12422s_long.xye"><code>hc6528_400_4_Qu_017_T1240C_t12422s_long.xye</code></a></td>
+<td>1240 °C</td>
+<td class="num">12422</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">882eae80a6c859bf163410a649712e715373953bcdad143fb06d7cf5f947a1e8</td>
+</tr>
+<tr class="even">
+<td class="m">018</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_018_T1240C_t12672s_short.xye"><code>hc6528_400_4_Qu_018_T1240C_t12672s_short.xye</code></a></td>
+<td>1240 °C</td>
+<td class="num">12672</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">4c4427718ee2d3637ab40f39921a85931f07dc69c73dbf7f19ff84cc54df6f83</td>
+</tr>
+<tr class="odd">
+<td class="m">019</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_019_T1240C_t12934s_short.xye"><code>hc6528_400_4_Qu_019_T1240C_t12934s_short.xye</code></a></td>
+<td>1240 °C</td>
+<td class="num">12934</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">73609aa5282b70dfc84c45a6724cd0a0690757714c52ab19e21bd59e2248aa61</td>
+</tr>
+<tr class="even">
+<td class="m">020</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_020_T1240C_t13196s_short.xye"><code>hc6528_400_4_Qu_020_T1240C_t13196s_short.xye</code></a></td>
+<td>1240 °C</td>
+<td class="num">13196</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">3765086d790f24a4eb9cb4196931d1ff85b4ef11b4285a48fd320def9e94e677</td>
+</tr>
+<tr class="odd">
+<td class="m">021</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_021_T1240C_t13458s_short.xye"><code>hc6528_400_4_Qu_021_T1240C_t13458s_short.xye</code></a></td>
+<td>1240 °C</td>
+<td class="num">13458</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">a39e6dc7b41ea22b4fa899482fb2ff721ee28db70cef844d7c378964dc7a6b94</td>
+</tr>
+<tr class="even">
+<td class="m">022</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_022_T1240C_t13732s_short.xye"><code>hc6528_400_4_Qu_022_T1240C_t13732s_short.xye</code></a></td>
+<td>1240 °C</td>
+<td class="num">13732</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">141dc52a31165850491688a4b91ac94572dfa43ff224d5e5fbef4f4c00729e88</td>
+</tr>
+<tr class="odd">
+<td class="m">023</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_023_T1245C_t13992s_short.xye"><code>hc6528_400_4_Qu_023_T1245C_t13992s_short.xye</code></a></td>
+<td>1245 °C</td>
+<td class="num">13992</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">2abbc87386fe3c69543b96fb2a9af0498fe2c0d2ac28abb28ab39faeb0a112b4</td>
+</tr>
+<tr class="even">
+<td class="m">024</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_024_T1245C_t14252s_short.xye"><code>hc6528_400_4_Qu_024_T1245C_t14252s_short.xye</code></a></td>
+<td>1245 °C</td>
+<td class="num">14252</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">3ceb5c510a0834e2c279914429d5256e167e5a78cdc207e6870d6d13eb7271cf</td>
+</tr>
+<tr class="odd">
+<td class="m">025</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_025_T1245C_t14524s_short.xye"><code>hc6528_400_4_Qu_025_T1245C_t14524s_short.xye</code></a></td>
+<td>1245 °C</td>
+<td class="num">14524</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">e6c12fdfbfb9a7a5a0ac548404393e784b9bf9b6cfb818e5d4c66c6baf8a1e30</td>
+</tr>
+<tr class="even">
+<td class="m">026</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_026_T1250C_t14786s_short.xye"><code>hc6528_400_4_Qu_026_T1250C_t14786s_short.xye</code></a></td>
+<td>1250 °C</td>
+<td class="num">14786</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">c2c5db987b9ba630ab2258750e17646b58c2966de5805d2baac9645eb45af40e</td>
+</tr>
+<tr class="odd">
+<td class="m">027</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_027_T1250C_t15046s_short.xye"><code>hc6528_400_4_Qu_027_T1250C_t15046s_short.xye</code></a></td>
+<td>1250 °C</td>
+<td class="num">15046</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">b737b15a01125cedffc2c136b17194cee0168348c0b865eb7ac6b121fee20480</td>
+</tr>
+<tr class="even">
+<td class="m">028</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_028_T1250C_t15310s_short.xye"><code>hc6528_400_4_Qu_028_T1250C_t15310s_short.xye</code></a></td>
+<td>1250 °C</td>
+<td class="num">15310</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">375a4a91cfc886e9897dae4f94c842059b5e1e173b768328ebce9cc4ab9f05ed</td>
+</tr>
+<tr class="odd">
+<td class="m">029</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_029_T1250C_t15570s_short.xye"><code>hc6528_400_4_Qu_029_T1250C_t15570s_short.xye</code></a></td>
+<td>1250 °C</td>
+<td class="num">15570</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">d5e08cda27b2f704eec6da8d097a4e8cdf91e2dc1f1a1771a3b3809a0eabe528</td>
+</tr>
+<tr class="even">
+<td class="m">030</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_030_T1250C_t15832s_short.xye"><code>hc6528_400_4_Qu_030_T1250C_t15832s_short.xye</code></a></td>
+<td>1250 °C</td>
+<td class="num">15832</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">8d69a60bae015cf0c9aa45664595c064186de9004c6b785efeb337c1ec1e5e47</td>
+</tr>
+<tr class="odd">
+<td class="m">031</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_031_T1266C_t16268s_short.xye"><code>hc6528_400_4_Qu_031_T1266C_t16268s_short.xye</code></a></td>
+<td>1266 °C</td>
+<td class="num">16268</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">a7d693dea340a2d6529e0b0c882db600147a4aab249f7cd05e93d2adf04f34d3</td>
+</tr>
+<tr class="even">
+<td class="m">032</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_032_T1270C_t16530s_short.xye"><code>hc6528_400_4_Qu_032_T1270C_t16530s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">16530</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">0ad753a961da30e1ff5208a092b45138eaa8ac4c229c81f805aa48e029cb4c8b</td>
+</tr>
+<tr class="odd">
+<td class="m">033</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_033_T1270C_t16792s_short.xye"><code>hc6528_400_4_Qu_033_T1270C_t16792s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">16792</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">016ed438ff7ec87e45c07bc635e0298bdb6c54209a37f42d54b6e2589b79c474</td>
+</tr>
+<tr class="even">
+<td class="m">034</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_034_T1270C_t17054s_short.xye"><code>hc6528_400_4_Qu_034_T1270C_t17054s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">17054</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">d2affed80f31ccbc75f0592673542a9349521f123f2a6ff5d88b2871fe2f2651</td>
+</tr>
+<tr class="odd">
+<td class="m">035</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_035_T1270C_t17314s_short.xye"><code>hc6528_400_4_Qu_035_T1270C_t17314s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">17314</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">048ff83d2634162323ba6e4c167b21cc0744ce7b0848248866f89ace910126d4</td>
+</tr>
+<tr class="even">
+<td class="m">036</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_036_T1270C_t17578s_short.xye"><code>hc6528_400_4_Qu_036_T1270C_t17578s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">17578</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">c035958024a1ff52846a7c31485a0fb3efb77d5e0cba9360f799ef120a800ea5</td>
+</tr>
+<tr class="odd">
+<td class="m">037</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_037_T1270C_t17838s_short.xye"><code>hc6528_400_4_Qu_037_T1270C_t17838s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">17838</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">928c7b75b1bbf87a6de67ac9d0b21ea93bb7cf78a81f827704a5aa2a819e34bd</td>
+</tr>
+<tr class="even">
+<td class="m">038</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_038_T1270C_t18100s_short.xye"><code>hc6528_400_4_Qu_038_T1270C_t18100s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">18100</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">8ae042ebba8dfc53cd90f34aed5f659c5b8636f8d73b3b3a2d9f49c203e1d723</td>
+</tr>
+<tr class="odd">
+<td class="m">039</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_039_T1270C_t18362s_short.xye"><code>hc6528_400_4_Qu_039_T1270C_t18362s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">18362</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">8a446cf2a76ec254a069cb1932fd3b15b84b508eae177fef01dbc6be9efdf8f8</td>
+</tr>
+<tr class="even">
+<td class="m">040</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_040_T1270C_t18624s_short.xye"><code>hc6528_400_4_Qu_040_T1270C_t18624s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">18624</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">b40e84fe1bdb7f219bce60fa64252928d8dcfeeaf4cefa811d9b1456928028a0</td>
+</tr>
+<tr class="odd">
+<td class="m">041</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_041_T1270C_t18884s_short.xye"><code>hc6528_400_4_Qu_041_T1270C_t18884s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">18884</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">67e8fe9b8dc1b985eaec46520fec6dfcd08dd32f805b6a72af746a39bbd517ef</td>
+</tr>
+<tr class="even">
+<td class="m">042</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_042_T1270C_t19146s_short.xye"><code>hc6528_400_4_Qu_042_T1270C_t19146s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">19146</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">1692dfe92bceb0ceec955b986f92a636685cac4125146a5082a9aea419b91897</td>
+</tr>
+<tr class="odd">
+<td class="m">043</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_043_T1270C_t19408s_short.xye"><code>hc6528_400_4_Qu_043_T1270C_t19408s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">19408</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">0c6675414bd0418dccfb447de024a620c7816c84edd47fb7ad4a8a94a48ee77f</td>
+</tr>
+<tr class="even">
+<td class="m">044</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_044_T1270C_t19686s_short.xye"><code>hc6528_400_4_Qu_044_T1270C_t19686s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">19686</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">54e755ca7905e6d404a88ac321207d2ed9ed41ae61172abc4e14eb0eb7a25e24</td>
+</tr>
+<tr class="odd">
+<td class="m">045</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_045_T1270C_t19948s_short.xye"><code>hc6528_400_4_Qu_045_T1270C_t19948s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">19948</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">61bf1f94920a99b79dcbac2878ce3a88ba9ca6d00ed5018947d69b3f7eff54f9</td>
+</tr>
+<tr class="even">
+<td class="m">046</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_046_T1270C_t20210s_short.xye"><code>hc6528_400_4_Qu_046_T1270C_t20210s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">20210</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">1a26894e77760d6287a59260030d01c2602ea9d3a07fd44c7c46e008c66182ae</td>
+</tr>
+<tr class="odd">
+<td class="m">047</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_047_T1270C_t20472s_short.xye"><code>hc6528_400_4_Qu_047_T1270C_t20472s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">20472</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">d03ee44260c8ca1c2ab3477e0628e0c91fa20b929f9c6c763594fefcc0f9d571</td>
+</tr>
+<tr class="even">
+<td class="m">048</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_048_T1270C_t20734s_short.xye"><code>hc6528_400_4_Qu_048_T1270C_t20734s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">20734</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">07443858b9ec33d9382f850d2d0ce6722a5dee137ac94023fc41dda679aadbee</td>
+</tr>
+<tr class="odd">
+<td class="m">049</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_049_T1270C_t20996s_short.xye"><code>hc6528_400_4_Qu_049_T1270C_t20996s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">20996</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">8bf2d06fbe0c0c780796af06b17f3695616d70412f1a9f10b3d516b0cbbfe598</td>
+</tr>
+<tr class="even">
+<td class="m">050</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_050_T1270C_t21256s_short.xye"><code>hc6528_400_4_Qu_050_T1270C_t21256s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">21256</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">89b277c677962c90cc14e0f79e62ee684e79df39e9538ac4b80604a9fe614a64</td>
+</tr>
+<tr class="odd">
+<td class="m">051</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_051_T1270C_t21518s_short.xye"><code>hc6528_400_4_Qu_051_T1270C_t21518s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">21518</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">84500f12621cf0eab0ece3287a67207d3f15897d70f0de2eb574e90d8b3a767e</td>
+</tr>
+<tr class="even">
+<td class="m">052</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_052_T1270C_t21778s_short.xye"><code>hc6528_400_4_Qu_052_T1270C_t21778s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">21778</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">cb741fd8553bcdf39da7cc633c125d0f8d1535bb4f668b742a32f0ad6f71b3c0</td>
+</tr>
+<tr class="odd">
+<td class="m">053</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_053_T1270C_t22040s_short.xye"><code>hc6528_400_4_Qu_053_T1270C_t22040s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">22040</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">35f87f71c876bd9a827a0e4dd007cafaa8d28c9d9739f91e15187c4ed5c1b891</td>
+</tr>
+<tr class="even">
+<td class="m">054</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_054_T1270C_t22300s_short.xye"><code>hc6528_400_4_Qu_054_T1270C_t22300s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">22300</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">5e67ffeeaa169fc4bb1588c132272a071792fbdc236a0ddb1072af1d73701703</td>
+</tr>
+<tr class="odd">
+<td class="m">055</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_055_T1270C_t22562s_short.xye"><code>hc6528_400_4_Qu_055_T1270C_t22562s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">22562</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">1f41d693cd4e4d70be45dfc9b0ac7f7a7332fb6cd104ca9a2eb3ec457a59a984</td>
+</tr>
+<tr class="even">
+<td class="m">056</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_056_T1270C_t22824s_short.xye"><code>hc6528_400_4_Qu_056_T1270C_t22824s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">22824</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">32cf0823e5cb042612255940d25a38be49797e5fc6543ef3e6bf1498d6066749</td>
+</tr>
+<tr class="odd">
+<td class="m">057</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_057_T1270C_t23086s_short.xye"><code>hc6528_400_4_Qu_057_T1270C_t23086s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">23086</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">f570ca2061afc8e2e613578df99207b4bc76fcc150d05ed14d65078e652a971a</td>
+</tr>
+<tr class="even">
+<td class="m">058</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_058_T1270C_t23346s_short.xye"><code>hc6528_400_4_Qu_058_T1270C_t23346s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">23346</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">f513f0d6a605d3976ea4d3ff54523d68d5cd4583456c317099020f92a5ff97c6</td>
+</tr>
+<tr class="odd">
+<td class="m">059</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_059_T1270C_t23610s_short.xye"><code>hc6528_400_4_Qu_059_T1270C_t23610s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">23610</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">1b42bf976b6efd02b7674de2706b7087e356d61a784cae1c1dd59895234b626a</td>
+</tr>
+<tr class="even">
+<td class="m">060</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_060_T1270C_t23870s_short.xye"><code>hc6528_400_4_Qu_060_T1270C_t23870s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">23870</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">b332f1db7806a6672fb83465eb0f23311cfefb2eb7a2b9ff16a16ae86e9f8c32</td>
+</tr>
+<tr class="odd">
+<td class="m">061</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_061_T1270C_t24132s_short.xye"><code>hc6528_400_4_Qu_061_T1270C_t24132s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">24132</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">f2617d330e66752bbd53ed586d9fd98f9e1b3e13b87f02c7587aee6a6a49eebe</td>
+</tr>
+<tr class="even">
+<td class="m">062</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_062_T1270C_t24394s_short.xye"><code>hc6528_400_4_Qu_062_T1270C_t24394s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">24394</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">4c52b39651b676067dfc58eec6aa975a8ee167611dde133e512d61d7c170a009</td>
+</tr>
+<tr class="odd">
+<td class="m">063</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_063_T1270C_t24656s_short.xye"><code>hc6528_400_4_Qu_063_T1270C_t24656s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">24656</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">d8bd11f931239651b5e6ec509e640281723c5b2bff8d34f2da391135d30752ba</td>
+</tr>
+<tr class="even">
+<td class="m">064</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_064_T1270C_t24918s_short.xye"><code>hc6528_400_4_Qu_064_T1270C_t24918s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">24918</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">61fa207f2256137c239bdf82e876be508370636ccd9ada1ec070bfb061653865</td>
+</tr>
+<tr class="odd">
+<td class="m">065</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_065_T1270C_t25180s_short.xye"><code>hc6528_400_4_Qu_065_T1270C_t25180s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">25180</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">ba950a9f78ea2e1c4022f09d380e0317a071ebc72beb0b09a449cfab937b60e6</td>
+</tr>
+<tr class="even">
+<td class="m">066</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_066_T1270C_t25442s_short.xye"><code>hc6528_400_4_Qu_066_T1270C_t25442s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">25442</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">d8a5f2b4da8133130835a905243ef5b82ab482b3bdbfd1f226aab4ac4c81d4d8</td>
+</tr>
+<tr class="odd">
+<td class="m">067</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_067_T1270C_t25704s_short.xye"><code>hc6528_400_4_Qu_067_T1270C_t25704s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">25704</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">fbcbdfc493a9e4244acae2aef4c28076c796afa28bfe1edebf24ca21fcb4bb12</td>
+</tr>
+<tr class="even">
+<td class="m">068</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_068_T1270C_t25964s_short.xye"><code>hc6528_400_4_Qu_068_T1270C_t25964s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">25964</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">97df89646a1e5f1179717577f3fbbffc795b0ff707a63a863dcec92b7b9bf6f0</td>
+</tr>
+<tr class="odd">
+<td class="m">069</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_069_T1270C_t26228s_short.xye"><code>hc6528_400_4_Qu_069_T1270C_t26228s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">26228</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">bff295e3a7da2b08a162f6c382a3be58ebceb3e28e2799731d7541c1831f22e4</td>
+</tr>
+<tr class="even">
+<td class="m">070</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_070_T1270C_t26516s_short.xye"><code>hc6528_400_4_Qu_070_T1270C_t26516s_short.xye</code></a></td>
+<td>1270 °C</td>
+<td class="num">26516</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">566aefb83da0570a1622365dab01bac74c3b1b323760a9d521d90fad1559eb9a</td>
+</tr>
+<tr class="odd">
+<td class="m">071</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_071_T1272C_t26806s_short.xye"><code>hc6528_400_4_Qu_071_T1272C_t26806s_short.xye</code></a></td>
+<td>1272 °C</td>
+<td class="num">26806</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">814bd17b5fda244ce7a2aeef81387b981ca3001f26739effa0265f3e741b06b2</td>
+</tr>
+<tr class="even">
+<td class="m">072</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_072_T1275C_t27066s_short.xye"><code>hc6528_400_4_Qu_072_T1275C_t27066s_short.xye</code></a></td>
+<td>1275 °C</td>
+<td class="num">27066</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">08dc60ceac38e4890a15fd51f9f747ab40fa96fc09da0ead8841b64142a0e85b</td>
+</tr>
+<tr class="odd">
+<td class="m">073</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_073_T1275C_t27328s_short.xye"><code>hc6528_400_4_Qu_073_T1275C_t27328s_short.xye</code></a></td>
+<td>1275 °C</td>
+<td class="num">27328</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">388da7e725f23d2e6a2d185d0f725acb263857c3ca0d58be8e3a0caa03cf1378</td>
+</tr>
+<tr class="even">
+<td class="m">074</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_074_T1275C_t27590s_short.xye"><code>hc6528_400_4_Qu_074_T1275C_t27590s_short.xye</code></a></td>
+<td>1275 °C</td>
+<td class="num">27590</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">60b1ad3745f73396cb78c4d93ce0fc37c3e271b402a2559901b11c241cca7239</td>
+</tr>
+<tr class="odd">
+<td class="m">075</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_075_T1275C_t27850s_short.xye"><code>hc6528_400_4_Qu_075_T1275C_t27850s_short.xye</code></a></td>
+<td>1275 °C</td>
+<td class="num">27850</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">85c249b5514be625507ee7c520495d438f52829b361488065af48b6d2a7f3a42</td>
+</tr>
+<tr class="even">
+<td class="m">076</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_076_T1275C_t28110s_short.xye"><code>hc6528_400_4_Qu_076_T1275C_t28110s_short.xye</code></a></td>
+<td>1275 °C</td>
+<td class="num">28110</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">7415c5bf34cd7fbcdc260c3fee4bda1ae4d87b920d0f212c5ec01f0ea0b88b54</td>
+</tr>
+<tr class="odd">
+<td class="m">077</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_077_T1275C_t28372s_short.xye"><code>hc6528_400_4_Qu_077_T1275C_t28372s_short.xye</code></a></td>
+<td>1275 °C</td>
+<td class="num">28372</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">34e16e56c55a4e72ece78efc401c36198f97807faa04da7a25a0deb000b2d259</td>
+</tr>
+<tr class="even">
+<td class="m">078</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_078_T1275C_t28634s_short.xye"><code>hc6528_400_4_Qu_078_T1275C_t28634s_short.xye</code></a></td>
+<td>1275 °C</td>
+<td class="num">28634</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">bbe1f434b8b35c1213c9807c84848c25cd1e7a3fe901e30f215ad86765d5c837</td>
+</tr>
+<tr class="odd">
+<td class="m">079</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_079_T1275C_t28904s_short.xye"><code>hc6528_400_4_Qu_079_T1275C_t28904s_short.xye</code></a></td>
+<td>1275 °C</td>
+<td class="num">28904</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">4a69442a737b91b3617b774f2def8cf434143b3a0b3a07f104d06bf3a4d6fb72</td>
+</tr>
+<tr class="even">
+<td class="m">080</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_080_T1280C_t29164s_short.xye"><code>hc6528_400_4_Qu_080_T1280C_t29164s_short.xye</code></a></td>
+<td>1280 °C</td>
+<td class="num">29164</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">de562404f2f513c7709e788686ca594774459e4bfe92391d3c5bea5f844ca71e</td>
+</tr>
+<tr class="odd">
+<td class="m">081</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_081_T1280C_t29426s_short.xye"><code>hc6528_400_4_Qu_081_T1280C_t29426s_short.xye</code></a></td>
+<td>1280 °C</td>
+<td class="num">29426</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">f97488e29b0c6111f369f4242514785a1b78d66f86cdf7e09a9b0f22bca47205</td>
+</tr>
+<tr class="even">
+<td class="m">082</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_082_T1280C_t29692s_short.xye"><code>hc6528_400_4_Qu_082_T1280C_t29692s_short.xye</code></a></td>
+<td>1280 °C</td>
+<td class="num">29692</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">04e0889c7ab6599a16faea28df54ad2a8f2abb90838cfdecff65d87c6bf0ac74</td>
+</tr>
+<tr class="odd">
+<td class="m">083</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_083_T1280C_t29950s_short.xye"><code>hc6528_400_4_Qu_083_T1280C_t29950s_short.xye</code></a></td>
+<td>1280 °C</td>
+<td class="num">29950</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">204b5996a04e35e0c565793d9bd550f81174ecf8903c03e71a8ae25e9b64bc84</td>
+</tr>
+<tr class="even">
+<td class="m">084</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_084_T1290C_t30726s_long.xye"><code>hc6528_400_4_Qu_084_T1290C_t30726s_long.xye</code></a></td>
+<td>1290 °C</td>
+<td class="num">30726</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">9e22163653706b0971287d169fda66da9800432a42d08d8267518130bd4e220e</td>
+</tr>
+<tr class="odd">
+<td class="m">085</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_085_T1290C_t31630s_short.xye"><code>hc6528_400_4_Qu_085_T1290C_t31630s_short.xye</code></a></td>
+<td>1290 °C</td>
+<td class="num">31630</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">96f4141286688b1cfb6162cfc8ecb7e9bfb5b179c01d0d4a287bd6b2a3252f5e</td>
+</tr>
+<tr class="even">
+<td class="m">086</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_086_T1299C_t32088s_short.xye"><code>hc6528_400_4_Qu_086_T1299C_t32088s_short.xye</code></a></td>
+<td>1299 °C</td>
+<td class="num">32088</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">128b191bc935996947d4390cd3dbb7fba35f019622525623b70f5ec189426777</td>
+</tr>
+<tr class="odd">
+<td class="m">087</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_087_T1300C_t32348s_short.xye"><code>hc6528_400_4_Qu_087_T1300C_t32348s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">32348</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">4b59f25042180fee5f33a6923252dfd36d69c915cf806bfee8d3526499a6ad44</td>
+</tr>
+<tr class="even">
+<td class="m">088</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_088_T1300C_t32610s_short.xye"><code>hc6528_400_4_Qu_088_T1300C_t32610s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">32610</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">fe3ab3aca797056716b3d23176ed1e83a7e54ff718ed9f4800a9f0787af2b785</td>
+</tr>
+<tr class="odd">
+<td class="m">089</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_089_T1300C_t32872s_short.xye"><code>hc6528_400_4_Qu_089_T1300C_t32872s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">32872</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">0088bc588d7f0e8497c30bfa1bdba918a58c78ece249f406132f130cb553c18d</td>
+</tr>
+<tr class="even">
+<td class="m">090</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_090_T1300C_t33132s_short.xye"><code>hc6528_400_4_Qu_090_T1300C_t33132s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">33132</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">8281ee3a04c24cb07b2a47eec6e7174ee84f31b51052bfcc23da3a2002d11d69</td>
+</tr>
+<tr class="odd">
+<td class="m">091</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_091_T1300C_t33394s_short.xye"><code>hc6528_400_4_Qu_091_T1300C_t33394s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">33394</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">bdc3de4b5b6eceec0c3fcd9ffe25d6b6a8d890a40f2daee3931a8a6c06cffb66</td>
+</tr>
+<tr class="even">
+<td class="m">092</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_092_T1300C_t33658s_short.xye"><code>hc6528_400_4_Qu_092_T1300C_t33658s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">33658</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">747c5a361dbfbb5f0576f3d09d39eb3b9e64fae34a8364b8a386aff5d2341e33</td>
+</tr>
+<tr class="odd">
+<td class="m">093</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_093_T1300C_t33920s_short.xye"><code>hc6528_400_4_Qu_093_T1300C_t33920s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">33920</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">5d81d8954ae5043cf5f926d51e6e13c62c17375edaa69c7de7f6d2da465f8376</td>
+</tr>
+<tr class="even">
+<td class="m">094</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_094_T1300C_t34182s_short.xye"><code>hc6528_400_4_Qu_094_T1300C_t34182s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">34182</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">62c82f99d45a865beb9d8ac8736b5433e0e4faec6b10d660d2bcd28869cd81fe</td>
+</tr>
+<tr class="odd">
+<td class="m">095</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_095_T1300C_t34444s_short.xye"><code>hc6528_400_4_Qu_095_T1300C_t34444s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">34444</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">ff4af98e24e8a08abe4ebe77f6122450593bc13ae8010967107765510554b108</td>
+</tr>
+<tr class="even">
+<td class="m">096</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_096_T1300C_t34704s_short.xye"><code>hc6528_400_4_Qu_096_T1300C_t34704s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">34704</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">d5a866876dc8035d2838526ca2d06b6cd73969550100ad7cfb3dba492a47232f</td>
+</tr>
+<tr class="odd">
+<td class="m">097</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_097_T1300C_t34966s_short.xye"><code>hc6528_400_4_Qu_097_T1300C_t34966s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">34966</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">b620206fa4cb2952b7b8b59258972e5a36ad79890963983c0490e1bb87b03394</td>
+</tr>
+<tr class="even">
+<td class="m">098</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_098_T1300C_t35228s_short.xye"><code>hc6528_400_4_Qu_098_T1300C_t35228s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">35228</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">8c893f07f97585b4bae29084fffc2534f7b543816ceeb9bfd7071b9101cf45dc</td>
+</tr>
+<tr class="odd">
+<td class="m">099</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_099_T1300C_t35490s_short.xye"><code>hc6528_400_4_Qu_099_T1300C_t35490s_short.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">35490</td>
+<td><span class="status status-short">short</span></td>
+<td class="num">1.16</td>
+<td class="m sha">aab222d6856bf2d1c6955eef21c2f38d5b57949abc9e5bcdaf7f70637304438a</td>
+</tr>
+<tr class="even">
+<td class="m">100</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_100_T1300C_t36128s_long.xye"><code>hc6528_400_4_Qu_100_T1300C_t36128s_long.xye</code></a></td>
+<td>1300 °C</td>
+<td class="num">36128</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">156508520b93412c6925350d4b6ee8cbc55ab3c032bf206197e0c814da670adf</td>
+</tr>
+<tr class="odd">
+<td class="m">101</td>
+<td><a href="https://jmigartua.github.io/esrf-hc6528-400-4/downloads/files/xye/hc6528_400_4_Qu_101_background_nosample_t38192s_long.xye"><code>hc6528_400_4_Qu_101_background_nosample_t38192s_long.xye</code></a></td>
+<td>background, no sample</td>
+<td class="num">38192</td>
+<td><span class="status status-long">long</span></td>
+<td class="num">1.16</td>
+<td class="m sha">58674923c560e4b6678ff0aa11cbd80ca5e61eb741c19af7869dea50bcee0926</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="how" class="anchored">How to use them</h2>
+<ul class="k-list">
+<li><b>The format.</b> Plain text, three columns per line: 2θ in degrees (0.001° step to 26.999°), intensity in counts after the beamline's normalisation, estimated standard deviation. No header. The first 0.02° is the beamstop's shadow (zero intensity, large esd). See <a href="../data/index.html#format">Data: file format</a>.</li>
+<li><b>The names.</b> <code>hc6528_400_4_Qu_&lt;seq&gt;_T&lt;temp&gt;C_t&lt;elapsed&gt;s_&lt;long|short&gt;.xye</code>: sequence, nominal temperature, seconds since the first scan, exposure class. The scheme and the original names: <a href="../data/index.html#naming">Data: naming</a>.</li>
+<li><b>In any program.</b> Every powder-diffraction program reads three-column <code>.xye</code> (Topas, GSAS-II, FullProf through its XY formats, Python with <code>numpy.loadtxt</code>).</li>
+<li><b>In diff-ref-struct.</b> Unpack the scans into a folder <code>Data/</code> and the sets zip beside it; <code>drs plots open Plots/hold-1270.drv</code> reads a set, <code>drs-publish build Publish/esrf-series.drp</code> remakes the projections, the app's Plots module opens any <code>.drv</code> with its Projection, Map and Surface views. The maps need the scans rebinned by the core; the README in the zip gives the two commands.</li>
+<li><b>Check what you got.</b> The SHA-256 of every file is in the index and in the table; <code>shasum -a 256 &lt;file&gt;</code> on a Mac, <code>sha256sum</code> on Linux.</li>
+</ul>
+</div>
+
+
+<!-- Closes the reading column opened by _gen/docs-nav.html, adds the right
+     "On this page" list, and wires: current-page marking in the left nav,
+     breadcrumbs, the page TOC (from h2/h3 in the reading column) and a
+     scroll-spy. Pure DOM, no library. -->
+  </div>
+  <aside class="docs-toc"><button class="docs-fold" type="button" data-fold="toc" aria-label="Hide the page outline" title="Hide the page outline">›</button><div class="t">On this page</div><ol></ol></aside>
+</div>
+<script>
+(function () {
+  /* 0. The two side panels fold on their chevrons; the choice is remembered in this browser. */
+  var docs = document.querySelector('.docs');
+  if (docs) {
+    var store = {};
+    try { store = JSON.parse(localStorage.getItem('docs-fold') || '{}'); } catch (e) { store = {}; }
+    function apply() {
+      docs.classList.toggle('nav-folded', !!store.nav);
+      docs.classList.toggle('toc-folded', !!store.toc);
+      document.querySelectorAll('.docs-fold').forEach(function (b) {
+        var which = b.getAttribute('data-fold'), folded = !!store[which];
+        b.innerHTML = (which === 'nav') === folded ? '&rsaquo;' : '&lsaquo;';
+        var what = which === 'nav' ? 'the navigation' : 'the page outline';
+        b.title = (folded ? 'Show ' : 'Hide ') + what; b.setAttribute('aria-label', b.title);
+      });
+    }
+    document.querySelectorAll('.docs-fold').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var which = b.getAttribute('data-fold'); store[which] = !store[which];
+        try { localStorage.setItem('docs-fold', JSON.stringify(store)); } catch (e) {}
+        apply();
+      });
+    });
+    apply();
+  }
+  /* 0b. The header ribbon: mark the entry whose section holds this page. Quarto rewrites the hrefs to
+     relative paths, so folders are read from the resolved URLs; the Overview link gives the site root. */
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a'));
+    if (!links.length) return;
+    /* a served URL may end in '/' (GitHub Pages: …/about/); read it as …/about/index.html */
+    function folder(path) { if (/\/$/.test(path)) path += 'index.html'; var s = path.split('/').filter(Boolean); return s.length > 1 ? s[s.length - 2] : ''; }
+    var wm = document.querySelector('a.wordmark');            // the wordmark links to the site root
+    var root = folder((wm || links[0]).pathname);
+    var map = { rietveld: 'cases', drude: 'cases', dielectric: 'cases' };
+    function key(path) { var f = folder(path); if (f === root) return 'overview'; return map[f] || f; }
+    var here = key(location.pathname);
+    links.forEach(function (a) { a.classList.toggle('current', key(a.pathname) === here); });
+  })();
+
+  var main = document.querySelector('.docs-main');
+  var nav = document.querySelector('.docs-nav');
+  var toc = document.querySelector('.docs-toc ol');
+  if (!main || !nav || !toc) return;
+
+  /* 1. Left nav: mark the current page (and section, if the hash matches). */
+  var here = location.pathname.replace(/\/index\.html$/, '/');
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var pageLink = null, hashLink = null;
+  links.forEach(function (a) {
+    var p = a.pathname.replace(/\/index\.html$/, '/');
+    if (p !== here) return;
+    if (!a.hash && !pageLink) pageLink = a;
+    if (a.hash && a.hash === location.hash) hashLink = a;
+  });
+  var cur = hashLink || pageLink;
+  if (cur) {
+    cur.classList.add('current');
+    var det = cur.closest('details.group');
+    if (det) { det.open = true; det.classList.add('has-current'); }
+    /* Breadcrumbs: group title › page (› section). */
+    var crumbs = document.createElement('div');
+    crumbs.className = 'docs-crumbs';
+    var g = det ? det.querySelector('summary.t') : null;
+    var parts = [];
+    function push(t) { if (t && parts[parts.length - 1] !== t) parts.push(t); }
+    if (g) push(g.textContent.trim());
+    if (pageLink && pageLink !== cur) push(pageLink.textContent.trim());
+    push(cur.textContent.trim());
+    crumbs.innerHTML = parts.map(function (t, i) {
+      return (i ? '<span class="sep">›</span>' : '') + '<span>' + t.replace(/</g, '&lt;') + '</span>';
+    }).join('');
+    main.insertBefore(crumbs, main.firstChild);
+  }
+
+  /* 2. Right "On this page": h2 and h3 of the reading column. */
+  var used = {};
+  var heads = Array.prototype.slice.call(main.querySelectorAll('h2, h3')).filter(function (h) {
+    if (h.closest('.site-foot, .featured-band, .msg-grid, [data-toc="no"]')) return false;
+    if (h.classList.contains('unnumbered') || h.id === 'contenido') return false;
+    return h.textContent.trim().length > 0;
+  });
+  heads.forEach(function (h) {
+    if (!h.id) {
+      var s = h.textContent.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'sec';
+      while (used[s] || document.getElementById(s)) s += '-';
+      h.id = s;
+    }
+    used[h.id] = true;
+    var li = document.createElement('li');
+    if (h.tagName === 'H3') li.className = 'l3';
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    /* This runs before KaTeX has rendered the headings, so a heading with mathematics still holds TeX
+       source: copy its markup, including the math spans, and let the page's KaTeX pass render the copy. */
+    var copy = h.cloneNode(true);
+    copy.querySelectorAll('.katex-mathml, annotation, .anchorjs-link').forEach(function (n) { n.remove(); });
+    var label = copy.textContent.trim().replace(/\s+/g, ' ');
+    if (copy.querySelector('.math, .math-done, .katex')) a.innerHTML = copy.innerHTML.trim();
+    else a.textContent = label.length > 72 ? label.slice(0, 70).replace(/[\s,;:]+\S*$/, '') + '…' : label;
+    a.title = label;
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+  if (!heads.length) { document.querySelector('.docs-toc').hidden = true; return; }
+
+  /* 3. Scroll-spy. */
+  var items = Array.prototype.slice.call(toc.querySelectorAll('a'));
+  function spy() {
+    var y = window.scrollY + 120, best = null;
+    heads.forEach(function (h) { if (h.getBoundingClientRect().top + window.scrollY <= y) best = h; });
+    items.forEach(function (a) { a.classList.toggle('current', best && a.getAttribute('href') === '#' + best.id); });
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  window.addEventListener('hashchange', spy);
+  spy();
+})();
+</script>
+<footer class="site-foot">
+  <div class="site-foot__inner">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <h4 class="anchored">What this is</h4>
+        <p>The ESRF ID22 measurements proposed by Irene Urcelay-Olabarria (proposal HC-6528, sample 400_4) and taken by Irene, Iñigo González de Arrieta and Mireia Sainz-Menchón: 101 powder diffraction scans from 900 to 1300 °C kept exactly as received, copied under names that say what they are, the figures of their evolution, and what the files show. Josu M. Igartua treats the data so that the team can interpret them.</p>
+        <div class="cite-block">Irene Urcelay-Olabarria (proposer) · Iñigo González de Arrieta &amp; Mireia Sainz-Menchón (experimental team, with Irene) · Josu M. Igartua (data treatment)<br>thermomat, Fisika Saila, EHU</div>
+      </div>
+      <div><h4 class="anchored">This site</h4><ul><li><a href="../index.html">Overview</a></li><li><a href="../protocol/index.html">Protocol</a></li><li><a href="../data/index.html">Data</a></li><li><a href="../timeline/index.html">Timeline</a></li><li><a href="../figures/index.html">Figures</a></li><li><a href="../downloads/index.html">Downloads</a></li><li><a href="../findings/index.html">Findings</a></li></ul></div>
+      <div><h4 class="anchored">The group</h4><ul>
+        <li><a href="https://www.thermomat.eus">thermomat.eus</a></li>
+        <li><a href="https://www.ehu.eus">EHU</a></li>
+        <li><a href="https://www.esrf.fr">ESRF</a></li></ul></div>
+      <div><h4 class="anchored">Status</h4><ul>
+        <li>Unpublished measurements; for the team</li>
+        <li>Figures through diff-ref-struct</li>
+        <li>Updated with the working site</li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 thermomat research group · unpublished measurements · work in progress</span>
+      <span>Quarto · family design kit</span>
+    </div>
+  </div>
+</footer>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
