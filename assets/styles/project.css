@@ -125,3 +125,12 @@
 /* Downloads: the hashes in full, wrapped. */
 .sha, .scans.dl .sha { overflow-wrap: anywhere; word-break: break-all; font-size: 11px; }
 .scans.dl td { vertical-align: top; }
+
+/* Story, correspondence, bibliography (L022) */
+.story-toc { margin: 18px 0 28px; }
+.chapter { scroll-margin-top: calc(var(--head-h, 92px) + 12px); margin: 0 0 30px; }
+.chapter h2 .num, .card h3 .num { font-family: var(--mono); font-size: 0.8em; color: var(--ink-faint); margin-right: 6px; }
+.verbatim.mail .subj { display: block; font-family: var(--sans); font-weight: 600; font-size: 14px; margin-bottom: 6px; white-space: normal; }
+.verbatim.mail .att, .verbatim.mail .note { display: block; font-family: var(--sans); font-size: 13px; color: var(--ink-soft); margin-bottom: 8px; white-space: normal; }
+.verbatim.mail .note { font-style: italic; }
+.card .facts { margin-top: 8px; }
